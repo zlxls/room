@@ -1,0 +1,8 @@
+INSERT INTO `dede_addoncase` VALUES('5','16','','','127.0.0.1','PHP MYSQL','http://www.lanyingit.cn','???????','?????????????????????');
+INSERT INTO `dede_addoncase` VALUES('6','16','','','127.0.0.1','','','','');
+INSERT INTO `dede_addoncase` VALUES('7','16','','','127.0.0.1','','','','');
+INSERT INTO `dede_addoncase` VALUES('8','16','','','127.0.0.1','','','','');
+INSERT INTO `dede_addoncase` VALUES('9','16','','','127.0.0.1','','','','');
+INSERT INTO `dede_addoncase` VALUES('10','16','','','127.0.0.1','','','','');
+INSERT INTO `dede_addoncase` VALUES('11','16','','','127.0.0.1','','','','');
+INSERT INTO `dede_addoncase` VALUES('12','16','','','127.0.0.1','','','','');

@@ -1,0 +1,47 @@
+<?php
+$z[0]=Array("field","",103,122);
+$z[0][4]['name']="title";
+$z[1]=Array("global","",123,149);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",190,219);
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",259,317);
+$z[3][4]['name']="description";
+$z[3][4]['function']="html2text(@me)";
+$z[4]=Array("include","",1207,1244);
+$z[4][4]['filename']="header.htm";
+$z[5]=Array("channel","\r\n            <a href=\"[field:typelink/]\">[field:typename/]</a>\r\n            ",1561,1745);
+$z[5][4]['type']="son";
+$z[5][4]['currentstyle']="<a href='~typelink~' class='current'>~typename~</a>";
+$z[6]=Array("php"," AddFilter(2,1,'jiagequjian,loupanleixing'); ",1795,1861);
+$z[7]=Array("arclist","\r\n                            <div class=\"hot-item\">\r\n                                <a href=\"[field:arcurl/]\" target=\"_blank\">\r\n                                    <span class=\"order order-top[field:global.autoindex/]\">[field:global.autoindex/]</span>\r\n                                    <span class=\"houseName\" title=\"[field:title/]\">[field:title/] </span>\r\n                                    <span class=\"unit pull-right\">[field:qijia/]元/㎡</span></a>\r\n                            </div>\r\n                           ",2243,2878);
+$z[7][4]['typeid']="1";
+$z[7][4]['row']="10";
+$z[7][4]['titlelen']="50";
+$z[7][4]['orderby']="hot";
+$z[7][4]['addfields']="qijia";
+$z[7][4]['channelid']="2";
+$z[8]=Array("arclist","\r\n                                <div class=\"hot-item\">\r\n                                    <a href=\"[field:arcurl/]\" target=\"_blank\">\r\n                                        <span class=\"order order-top[field:global.autoindex/]\">[field:global.autoindex/]</span>\r\n                                        <span class=\"houseName\" title=\"[field:title/]\">[field:title/] </span>\r\n                                        <span class=\"unit pull-right\">[field:qijia/]元/㎡</span></a>\r\n                                </div>\r\n                               ",3487,4136);
+$z[8][4]['typeid']="1";
+$z[8][4]['row']="10";
+$z[8][4]['titlelen']="50";
+$z[8][4]['addfields']="qijia";
+$z[8][4]['channelid']="2";
+$z[9]=Array("sql","[field:c /]",4719,4814);
+$z[9][4]['sql']="select count(ID) as c from dede_archives where channel=2";
+$z[10]=Array("list","             \r\n                             <div class=\"house-item\">\r\n                                <div class=\"buy-type\">\r\n                                    <img width=\"30\" src=\"/skin/images/tuan.png\" alt=\"团购楼盘\"/>\r\n                                    <img width=\"30\" src=\"/skin/images/du.png\" alt=\"独家代理\"/>\r\n                                </div>\r\n                                 <a href=\"[field:arcurl/]\" target=\"_blank\">\r\n                                <img width=\"200\" height=\"150\" src=\"[field:litpic/]\" alt=\"[field:title/]\">\r\n                                 </a>\r\n                                <h5>\r\n                                     <a href=\"[field:arcurl/]\" target=\"_blank\">[field:title/]</a>\r\n                                </h5>\r\n								<h5 class=\"product-list\">\r\n                                    <span>[field:tyouhui/]</span>\r\n                                </h5>\r\n								    <label class=\"marker\">\r\n                                    <span class=\"glyphicon glyphicon-map-marker\"></span>\r\n                                    [field:lopandizhi/]                             \r\n                                    </label>\r\n                                <label class=\"unit-title pull-right\">\r\n                                    <span>[field:qijia/]</span> 元/㎡\r\n                                    </label>\r\n                                <br/>\r\n                                [field:id function=GetTags(@me)/]    \r\n                            </div>\r\n                           ",5173,6739);
+$z[10][4]['pagesize']="10";
+$z[11]=Array("pagelist","",7126,7182);
+$z[11][4]['listitem']="pre,next,pageno";
+$z[11][4]['listsize']="5";
+$z[12]=Array("arclist","\r\n                            <div class=\"interest-item\">\r\n                            <a href=\"[field:arcurl/]\" target=\"_blank\">\r\n                            <img src=\"[field:litpic/]\" height=\"240\" width=\"320\" alt=\"[field:title/]\"/>\r\n                            <div class=\"interest-title\">\r\n                                <span class=\"glyphicon glyphicon-map-marker\"></span>\r\n                                [field:typename/]                                \r\n                                <div class=\"tab-list pull-right\"></div>\r\n                            </div>\r\n                            <div  class=\"interest-info\">\r\n                                <label>[field:title/]</label>\r\n                                <div>\r\n                                    <label class=\"unit pull-right\"><span>[field:qijia/]</span> 元/㎡\r\n                                    </label>\r\n                                </div>\r\n                            </div>\r\n                            </a>\r\n                        </div>\r\n                                                \r\n                       ",7565,8770);
+$z[12][4]['typeid']="1";
+$z[12][4]['row']="3";
+$z[12][4]['titlelen']="50";
+$z[12][4]['orderby']="rand";
+$z[12][4]['addfields']="qijia";
+$z[12][4]['channelid']="2";
+$z[13]=Array("include","",9295,9332);
+$z[13][4]['filename']="footer.htm";
+
+?>

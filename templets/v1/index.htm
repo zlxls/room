@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<!--[if lte IE 8]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by dede58.com" />
+<link rel="stylesheet" href="/skin/css/base.css" />
+<link rel="stylesheet" href="/skin/css/common.css" />
+<link rel="stylesheet" href="/skin/css/mask.css">
+<link rel="stylesheet" href="/skin/css/dialog.css">
+<link rel="stylesheet" href="/skin/css/index.css">
+<link rel="stylesheet" href="/skin/css/header.css">
+<link rel="stylesheet" href="/skin/css/backtop.css">
+<link rel="stylesheet" href= "/skin/css/footer.css">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+</head>
+<body>
+<!-- login --> 
+
+<!-- login: begin --> 
+
+<!-- login: end --> 
+
+<script src="/skin/js/jquery.min.js"></script> 
+<script src="/skin/js/placeholder.js"></script> 
+<script src="/skin/js/mask.js"></script> 
+<script src="/skin/js/alert.js"></script> 
+
+<!-- container: begin -->
+<div id="container"> 
+  <!-- header: begin --> 
+  {dede:include filename="header.htm"/} 
+  <!-- header: end --> 
+  
+  <!-- main: begin -->
+  <div id="main"> 
+    
+    <!-- search: begin -->
+    <div id="search"> <a href="javascript:void(0);"   class="advertisement"> <img src="/skin/images/indextopdefault.jpg"></a>
+      <div class="searchContent">
+        <div class="searchBox">
+          <p class="tab cf"> <a class="search_map"><i></i> 海南房产</a> </p>
+          <form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <input type="hidden" name="typeid" value="1">
+            <input type="hidden" name="kwtype" value="0" />
+            <input class="searchkey" name="q" type="text" id="search-keyword" placeholder="请输入楼盘名称、地址" value="">
+            <input type="submit" value="搜索">
+          </form>
+          <p class="hotWords"> 热词：
+            {dede:hotwords num='5' subday='365' maxlength='16' /} </p>
+        </div>
+      </div>
+    </div>
+    <!-- search: end --> 
+    
+    <!-- detail: begin -->
+    <div id="detail" class="cf">
+      <ul>
+        <li class="fl item1"></li>
+        <li class="fl item2"></li>
+        <li class="fl item3"></li>
+        <li class="fl item4"></li>
+      </ul>
+    </div>
+    <!-- detail: end -->
+    
+    <div class="con">
+      <ul>
+        <li> <a href="/plus/list.php?tid=1"> <img src="/skin/images/class1.jpg">
+          <div class="txt" style="height: 45px;">
+            <h3 style="padding-top: 0px;">年度热盘</h3>
+            <p>易居为您搜集性能比好的年度热盘供您选择！</p>
+          </div>
+          </a> </li>
+        <li> <a href="/plus/list.php?tid=1&loupanleixing=海景房"> <img src="/skin/images/class2.jpg">
+          <div class="txt">
+            <h3>海景房</h3>
+            <p>再度出发，在海的那边遇见最美好的自已</p>
+          </div>
+          </a> </li>
+        <li style="margin-right:0px;"> <a href="/plus/list.php?tid=1&loupanleixing=特色别墅"> <img src="/skin/images/class3.jpg">
+          <div class="txt" style="overflow: hidden; height: 45px;">
+            <h3 style="padding-top: 0px;">别墅精选</h3>
+            <p>在别致的地方，寻找属于自己的第二居所。</p>
+          </div>
+          </a> </li>
+        <li> <a href="/plus/list.php?tid=1&loupanleixing=养老房"> <img src="/skin/images/class4.jpg">
+          <div class="txt" style="overflow: hidden; height: 45px;">
+            <h3 style="padding-top: 0px;">养生度假</h3>
+            <p>休闲生活配套结合度假功能进行无限延伸</p>
+          </div>
+          </a> </li>
+        <li> <a href="/plus/list.php?tid=1&loupanleixing=温泉入户"> <img src="/skin/images/class5.jpg">
+          <div class="txt" style="overflow: hidden; height: 45px;">
+            <h3 style="padding-top: 0px;">温泉入户</h3>
+            <p>在家也可以舒舒服服的泡温泉</p>
+          </div>
+          </a> </li>
+        <li style="margin-right:0px;"> <a href="/plus/list.php?tid=1&loupanleixing=打折优惠"> <img src="/skin/images/class6.jpg">
+          <div class="txt">
+            <h3>团购独家折扣</h3>
+            <p>易居为您独家折扣，值得你一起go!</p>
+          </div>
+          </a> </li>
+      </ul>
+    </div>
+    
+    <!-- activity: begin -->
+    <div id="activity">
+      <div class="actContent">
+        <h2>优惠团购</h2>
+        <p>上易居买房，最高立减30%团购费</p>
+        <div class="actBox cf">
+          <div class="actContain"> <i class="left"></i>
+            <div class="actImg">
+              <ul id="actSlide"class="cf">
+                {dede:arclist row='5' flag='f' titlelen='30' addfields='qijia,junjia' channelid='2' typeid='1'}
+                <li> <a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]" alt="[field:title/]"></a>
+                  <div>
+                    <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+                    <p class="price">起价：[field:qijia/]元/㎡</p>
+                    <p class="price">均价：[field:junjia/]元/㎡</p>
+                  </div>
+                </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+            <i class="right"></i> </div>
+        </div>
+      </div>
+    </div>
+    <!-- activity: end --> 
+    
+    <!-- download: begin -->
+    <div id="download">
+      <div class="main cen mg2">
+        <div class="mleft sod">
+          <div class="mleft_lphot">
+            <div class="mleft_lphot_n">
+              <div class="lphot_n_left"> {dede:arclist row='1' titlelen='30' addfields='qijia,junjia' channelid='2' typeid='1' flag='c'} <a href="[field:arcurl/]" target="_blank"><img title="[field:title/]" src="[field:litpic/]" style="border-width:0px;">
+                <div class="lphot_n_txt">
+                  <p class="title" title="[field:title/]"><b>[field:title/]</b><span class="txt_city sz16">[[field:typename/]]</span></p>
+                  <p class="price sz16">起价：<font class="jg">[field:qijia/]元</font>/㎡ &nbsp;&nbsp;&nbsp; 均价：<font class="jg">[field:junjia/]元</font>/㎡</p>
+                </div>
+                </a> {/dede:arclist}
+                <div class="clear"></div>
+              </div>
+              <div class="lphot_n_right">
+                <div class="rec_pic">
+                  <ul>
+                    {dede:arclist row='4' titlelen='30' addfields='qijia,junjia' channelid='2' typeid='1' noflag='c'}
+                    <li> <a href="[field:arcurl/]" target="_blank"><img title="[field:title/]" src="[field:litpic/]" style="border-width:0px;"></a>
+                      <h3><b>[field:title/]</b></h3>
+                      <p>起价：<font class="font_01">[field:qijia/]元</font>/㎡ &nbsp;&nbsp;<span>[[field:typename/]]</span></p>
+                    </li>
+                    {/dede:arclist}
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="mright sod">
+          <div class="mright_lphot_top"> <a href="" target="_blank"><span class="sz14">更多</span></a>
+            <h3>最新看房日记</h3>
+          </div>
+          <div class="mright_lphot_n">
+            <dl>
+              {dede:arclist typeid='11' row='1' titlelen='50' orderby='pubdate' flag='c' infolen='130'}
+              <dt> <a href="[field:arcurl/]" target="_blank"><img title="[field:title/]" src="[field:litpic/]" style="border-width:0px;"> <span><b>[field:title/]</b></span> </a> </dt>
+              {/dede:arclist}            
+              
+              {dede:arclist typeid='11' row='7' titlelen='50' orderby='pubdate' noflag='c' infolen='130'}
+              <dd> <a title="[field:title/]" href="[field:arcurl/]" target="_blank">[field:title/]</a> </dd>
+              {/dede:arclist}
+            </dl>
+            <div class="tab_bg"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <!-- download: end --> 
+    
+    <!-- news: begin -->
+    <div id="news">
+      <div class="newsContent">
+        <h2>最新资讯</h2>
+        <div class="newsBox cf">
+          <div class="fl newImg">
+            <ul id="newSlide"class="cf">
+              {dede:arclist typeid='2' row='4' titlelen='50' orderby='pubdate' type='image'}
+              <li> <a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]"  width="600" height="450" border="0"></a>
+                <p><a href="[field:arcurl/]">[field:title/]</a></p>
+              </li>
+              {/dede:arclist}
+            </ul>
+            <div id="newSlideBtn"></div>
+          </div>
+          <ul class="newItems">
+            {dede:arclist typeid='2' row='4' titlelen='50' orderby='pubdate' type='image' flag='c' infolen='130'}
+            <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]" class="fl" width="100" height="75" border="0"></a>
+              <div class="cf">
+                <h4><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h4>
+                <p class="new_detail">[field:info/]... <a href="[field:arcurl/]" class="fr" title="[field:title/]">[查看详情]</a> </p>
+              </div>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- news: end --> 
+    
+    <!-- widget: begin -->
+    <div class="widget"> <a href="/m" class="phone"> <img src="/skin/images/phone.png" alt=""> <span>手机版</span> </a> <a href="javascript:void(0);" class="backTop"> <img src="/skin/images/backtop.png" alt=""> </a> </div>
+    <!-- widget: end --> 
+    
+  </div>
+  <!-- main: end --> 
+  <!-- footer: begin --> 
+  {dede:include filename="footer.htm"/} 
+  <!-- footer: end --> 
+  
+</div>
+<!-- container: end --> 
+
+<script type="text/javascript">
+$(".con ul li").hover(function(){
+	$(this).find(".txt").stop().animate({height:"198px"},400);
+	$(this).find(".txt h3").stop().animate({paddingTop:"60px"},400);
+},function(){
+	$(this).find(".txt").stop().animate({height:"45px"},400);
+	$(this).find(".txt h3").stop().animate({paddingTop:"0px"},400);
+})
+</script> 
+<script src="/skin/js/slide.js"></script> 
+<script src="/skin/js/select.js"></script> 
+<script src="/skin/js/dialog.js"></script> 
+<script src="/skin/js/alert.js"></script> 
+<script src="/skin/js/index.js"></script> 
+<script>
+$(document).ready(function() {
+    $('.backTop').click(function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+    });
+});
+</script>
+<style>
+.login{ display:none}
+.tel{ display:block;}
+</style>
+</body>
+</html>

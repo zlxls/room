@@ -1,0 +1,22 @@
+﻿/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+body {
+	background: #f1f1f1;
+	font-family: '微软雅黑', Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 14px;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+input {
+	font-family: '微软雅黑', Helvetica, Tahoma, Arial, sans-serif;
+}
+input:focus {
+	outline: none;
+}
+.pointer {
+	cursor: pointer;
+}

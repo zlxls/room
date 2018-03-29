@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<link href="/m/skin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/swiper.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="bookmark" href="favicon.ico" />
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+body {
+	background-color: #fff;
+}
+a:link {
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+<!--header-->
+<header> <a href="javascript:window.history.back();" class="tb_back Hui-iconfont" title="返回">&#xe6d4;</a>
+  <h1 class="header_title">资讯详情</h1>
+  <a class="tb_navigation Hui-iconfont" href="javascript:void(0);">&#xe681;</a>
+  <div class="topnav pointer_li">
+    <ul>
+      <li><a href="/m">首页</a></li>
+      {dede:channel type='top' row='10'}
+      <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <div class="clear"></div>
+  </div>
+</header>
+<!--header end-->
+
+<article>
+  <div class="header">
+    <h1>{dede:field.title/}</h1>
+    <address>
+    {dede:field.typename/}
+    <time>{dede:field.pubdate function="MyDate('Y年m月d日',@me)"/}</time>
+    阅读量：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script> 次
+    </address>
+  </div>
+  <div class="content">{dede:field.body/}</div>
+</article>
+{dede:include filename="footer_m.htm"/} 
+<script type="text/javascript" src="/m/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/m/skin/js/list.js"></script> 
+<script type="text/javascript" src="/m/skin/js/swiper.jquery.min.js"></script> 
+<script type="text/javascript" src="/m/skin/js/jquery.scrollloading.js"></script> 
+<script type="text/javascript">
+    $(function () {
+        $('.tb_navigation').on('click', function () {
+            $('.topnav').toggle();
+            $('.black').toggle();
+        })
+        $(".scrollLoading").scrollLoading();
+        $('div').not('.topnav').on('click', function () {
+            $('.topnav').hide();
+            $('.black').hide();
+        })
+    })
+	</script>
+</body>
+</html>

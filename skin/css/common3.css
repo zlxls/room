@@ -1,0 +1,1276 @@
+﻿
+/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	-webkit-text-size-adjust: none;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+html {
+	cursor: url(images/cursor.ico), auto;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #ff5f3e;
+}
+.clear-fix {
+	clear: left;
+}
+body {
+	color: #444;
+	font: 14px/1.5 Tahoma, Verdana, Arial;
+	margin: 0;
+	min-width: 905px;
+	background: url(../images/con_bg.gif) repeat;
+}
+/* Firefox */ 
+
+
+#nav2 {
+	width: 220px;
+	color: #606566;
+	position: fixed;
+	top: 0;
+	left: 55px;
+	z-index: 0;
+	background-color: #fff;
+	padding-bottom: 36px;
+}
+.nav-1 {
+	position: absolute !important;
+}
+#content {
+	min-height: 556px;
+	display: inline-block;
+	margin-left: 325px;
+	padding: 0px 50px 100px 0px;
+	width: 80%;
+}
+.content-single {
+	overflow: hidden;
+	display: block !important;
+	background-color: #fff;
+	padding: 20px;
+}
+.entry-content {
+	max-width: 730px;
+	min-width: 431px;
+	min-height: 502px;
+	padding: 20px 0 0;
+	color: #4A4A4A;
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 1.8;
+}
+#footer {
+	zoom: 1;
+	overflow: hidden;
+	font-size: 12px;
+	background: #323232;
+	border-top: 3px solid #3263b9;
+}
+ ----------------------------------------------- */  #form-wrap {
+position: absolute;
+display: none;
+right: 0;
+height: 185px;
+width: 220px;
+padding-top: 10px;
+background: url(../images/ued-sprites.png) 199px -810px no-repeat;
+}
+#form-wrap form {
+	padding: 20px 20px 10px;
+	background-color: #f55f3e;
+}
+#form-wrap .firstline {
+	padding-bottom: 18px;
+}
+#form-wrap p {
+	padding-bottom: 10px;
+}
+#form-wrap .input {
+	outline: none;
+	border: none;
+	background: white;
+	width: 130px;
+	height: 14px;
+	padding: 4px 5px;
+	margin-left: 10px;
+}
+#form-wrap .button-primary {
+	height: 23px;
+	width: 52px;
+	color: #999999;
+	margin-left: 36px;
+	border: 1px solid #d94625;
+	cursor: pointer;
+	background-color: #ffffff;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+}
+#form-wrap .button-primary:hover {
+	background-color: #F0F0F0;
+}
+#form-wrap li.now {
+	background-color: #F0F0F0;
+}
+#form-wrap #rememberme {
+	vertical-align: middle;
+	margin-left: 36px;
+}
+#form-wrap .submit {
+	border-bottom: 1px solid #dc5335;
+}
+#form-wrap .register {
+	padding: 8px 0 0;
+}
+#form-wrap .register a {
+	color: #ffffff;
+	line-height: 14px;
+}
+#form-wrap .register a:hover {
+	color: #ffd143;
+	text-decoration: underline;
+}
+#form-wrap .reg-link {
+	margin-left: 36px;
+}
+#form-wrap .register span {
+	color: #dc5335;
+	margin: 0 10px;
+}
+#form-wrap .register .weibo-login {
+	display: inline-block;
+	height: 14px;
+	padding-left: 20px;
+	background: url(../images/ued-sprites.png) 0 -212px no-repeat;
+}
+/* = Nav Header
+----------------------------------------------- */
+.z-logo {
+	width: 100%;
+	overflow: hidden;
+}
+.menu-container {
+	padding: 27px 0 0 0px;
+	position: relative;
+}
+.menu-container .menu {
+	width: 220px;
+}
+.menu-container .menu-item {
+	color: #606566;
+	height: 40px;
+	width: 180px;
+	padding: 0px 20px;
+	display: inline-block;
+}
+.menu-container .menu-item:hover, li.thisclass {
+	background: url(../images/li_bg.gif) no-repeat;
+}
+.menu-container .now {
+	background: url(../images/li_bg.gif) no-repeat;
+}
+.menu-container .cat-item {
+	height: auto;
+	border-top: 1px solid #f8f8f8;
+}
+.menu-container a {
+	height: 39px;
+	line-height: 39px;
+	float: left;
+	color: inherit;
+	padding-left: 20px;
+	width: 160px;
+	border-bottom: 1px solid #fffcf5;
+}
+.menu-container a:hover {
+	width: 180px;
+}
+.menu-container .children a {
+	font-size: 13px;
+	padding-left: 38px;
+	width: 152px;
+}
+.menu-container a:hover, .menu-container .current-menu-item, .menu-container .current-cat {
+	color: #c00;
+	text-decoration: none;
+!important;
+}
+.sidebar-search {
+	padding: 20px 0 0 30px;
+}
+.search-form {
+	position: relative;
+	display: inline-block;
+}
+.search-form .search-input {
+	width: 134px;
+	height: 20px;
+	border: none;
+	border-radius: 2px;
+	padding: 2px 2px 2px 20px;
+	color: #606566;
+	line-height: 18px;
+	background: #f3f3f3 url(../images/ued-sprites.png) 5px -100px no-repeat;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+}
+.search-form .btn-search {
+	border: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	left: 1px;
+	top: 1px;
+	cursor: pointer;
+	background: none;
+}
+.search-form .search-input:focus, .search-form:hover .search-input {
+	color: #ffffff !important;
+	background: #ff5f3e url(../images/ued-sprites.png) 5px -118px no-repeat;
+}
+/* = Slider
+----------------------------------------------- */
+.photos {
+	height: 320px;
+	margin-bottom: 50px;
+	position: relative;
+	overflow-y: hidden;
+	float: left;
+}
+.photos-container {
+	width: 580px;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+.panel {
+	width: 100%;
+	height: 100%;
+}
+.panel a {
+	width: inherit;
+	height: inherit;
+	display: inline-block;
+	background-position: left bottom !important;
+}
+.photos .slide-nav {
+	position: absolute;
+	bottom: -40px;
+	z-index: 100;
+	width: 100%;
+	height: 40px;
+}
+.photos .switch-arrow {
+	width: 290px;
+	height: 100%;
+	background: #000 url(../images/ued-sprites.png) no-repeat;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	-webkit-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-o-transition: background-color 0.2s linear;
+}
+.photos .switch-arrow:hover {
+	background-color: #ff5500;
+	opacity: .8;
+	filter: alpha(opacity=80);
+}
+.pre {
+	float: left;
+	background-position: 141px -484px !important;
+}
+.next {
+	float: right;
+	background-position: 141px -539px !important;
+}
+.download {
+	width: 280px;
+	height: 100%;
+	float: left;
+	margin-left: 20px;
+}
+.download a {
+	width: inherit;
+	height: inherit;
+	float: left;
+	overflow: hidden;
+}
+/* = Content
+----------------------------------------------- */
+#content .title {
+	color: #333;
+	font-size: 32px;
+	font-family: Microsoft YaHei;
+	line-height: 32px;
+	margin-bottom: 32px;
+	margin-top: -64px;
+}
+#content .title a {
+	color: inherit;
+}
+#content .articles {
+	float: left;
+	clear: left;
+}
+#content .pages {
+	float: left;
+	width: 100%;
+}
+#content .pages .page {
+	width: 82px;
+	height: 82px;
+	float: left;
+	background-color: #eeeeee;
+	background-repeat: no-repeat;
+	background-image: url(../images/sub.png);
+}
+#content .pages .pre-page {
+	background-position: 0px -496px;
+}
+#content .pages .next-page {
+	margin-left: 10px;
+	background-position: -82px -496px;
+}
+#content .pages a {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	float: left;
+	background: #cccccc url(../images/sub.png) no-repeat;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+}
+#content .pages a:hover {
+	background-color: #ff5f3e;
+	background-position: -164px -440px;
+}
+#content .pages .pre-page a {
+	background-position: 0px -496px;
+}
+#content .pages .pre-page a:hover {
+	background-position: -164px -496px;
+}
+#content .pages .next-page a {
+	background-position: -82px -496px;
+}
+#content .pages .next-page a:hover {
+	background-position: -246px -496px;
+}
+#content .page-num {
+	float: left;
+	margin: 0 10px;
+}
+.article-list {
+	float: left;
+	margin: 0 0 0 -20px;
+}
+.hot-icon {
+	display: inline-block;
+	width: 40px;
+	height: 18px;
+	font-size: 0;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 200;
+	background: url(../images/ued-sprites.png) 0 -709px no-repeat;
+}
+.article-list li {
+	width: 280px;
+	height: 230px;
+	margin: 0 0 40px 20px;
+	float: left;
+	background-color: #fff !important;
+	position: relative;
+	border: #f1f1f1 3px solid;
+}
+.article-list li:hover {
+	border: 3px solid #3363ba;
+}
+.article-list .article-shortcut {
+	background-color: #f2f2f2;
+	height: 180px;
+	width: inherit;
+	overflow: hidden;
+}
+.article-list .article-shortcut .post-link {
+	height: inherit;
+	width: inherit;
+	float: left;
+	background-color: #e6e6e6;
+	overflow: hidden;
+}
+.article-list .article-shortcut .wp-post-image {
+	max-height: 180px;
+	max-width: 280px;
+	_height: inherit;
+	_width: inherit;
+	display: none;
+}
+.article-list .article-shortcut p {
+	padding: 20px 20px 0;
+	color: #888;
+	font-size: 12px;
+	line-height: 22px;
+	display: inline-block;
+	text-indent: 24px;
+}
+.article-list .article-shortcut .readmore {
+	color: #FF5F3E;
+	text-decoration: underline;
+	font-size: 12px;
+}
+.article-list .article-title {
+	margin: 5px;
+	height: 18px;
+	overflow: hidden;
+}
+.article-list .article-title a {
+	color: #333;
+	font-size: 14px;
+	line-height: 16px;
+	width: 100%;
+	height: 18px;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.article-list li:hover .article-title a, .article-list .article-title a:hover {
+	color: #FF5F3E;
+}
+.article-list .article-relative {
+	margin: 0 10px;
+	color: #999;
+	font-size: 11px;
+}
+.article-relative .date {
+}
+.article-relative .op {
+	float: right;
+}
+.article-relative .op a {
+	display: inline-block;
+	height: 12px;
+	line-height: 10px;
+	padding-left: 14px;
+	color: #999;
+	text-decoration: none;
+	background-image: url(../images/ued-sprites.png);
+	background-repeat: no-repeat;
+}
+.article-relative .op a:hover {
+	color: #ff5f3e;
+}
+a.liking, a.liking:hover {
+	background: url(../images/like-loading.gif) no-repeat !important;
+}
+a.liked {
+	background-position: 0 -18px !important;
+}
+.article-relative .op .comment {
+	margin-left: 10px;
+}
+.article-relative .like a {
+	background-position: 0 0;
+}
+.article-relative .comment a {
+	background-position: 0 -35px;
+}
+.article-relative .like a:hover {
+	background-position: 0 -18px;
+}
+.article-relative .comment a:hover {
+	background-position: 0 -53px;
+}
+/* = Empty Promot
+----------------------------------------------- */
+.empty-posts {
+	margin: 100px 0;
+}
+.empty-posts h2 {
+	font-size: 18px;
+	color: #666;
+}
+.empty-posts p {
+	font-size: 14px;
+	color: #999;
+	margin-top: 10px;
+}
+/* = Detail
+----------------------------------------------- */
+.content-single .container {
+	min-width: 580px;
+	_width: 600px;
+	margin: 0 100px 0 0;
+}
+.article-container {
+	position: relative;
+	background-color: #fff;
+}
+.article-container .post {
+	padding: 20px 25px 0;
+	overflow: hidden;
+}
+/* = CSS Back
+----------------------------------------------- */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+	font-weight: bold;
+	font-family: Microsoft YaHei;
+}
+.entry-content code, .entry-content kbd, .entry-content pre, .entry-content samp, .entry-content tt {
+	font-family: Courier New, Courier, monospace;
+}
+.entry-content strong {
+	font-weight: bold;
+}
+.entry-content h1 {
+	font-size: 22px;
+}
+.entry-content h2, .entry-content h3 {
+	font-size: 16px;
+}
+.entry-content h4, .entry-content h5, .entry-content h6 {
+	font-size: 14px;
+}
+.entry-content p {
+	margin: 15px 0;
+}
+.entry-content pre {
+	background: #EEE none repeat scroll 0 0;
+	border: 1px solid #DDD;
+	line-height: 150%;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.entry-content a {
+	color: #0064B1;
+	text-decoration: underline;
+}
+.entry-content a:visited {
+	color: #456B95;
+}
+.entry-content a:hover {
+	color: #c00;
+}
+.entry-content ul, .entry-content ol {
+	margin: 15px 0 15px 30px;
+	list-style: disc;
+}
+.entry-content table {
+	border-collapse: separate;
+	border-spacing: 5px;
+}
+.entry-content caption, .entry-content th, .entry-content td {
+	vertical-align: top;
+}
+.entry-content img {
+	max-width: 100%;
+}
+.article-container .entry-header {
+	padding-bottom: 12px;
+}
+.article-container .entry-content {
+	max-width: 730px;
+	min-width: 431px;
+	min-height: 502px;
+	padding: 20px 0 120px;
+	color: #4a4a4a;
+	overflow: hidden;
+	font: 14px/1.8 Helvetica, Arial, sans-serif;
+}
+.entry-header .entry-title {
+	color: #333333;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	font-family: Microsoft YaHei;
+}
+.entry-header .author-icon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+.title-author-time-tags {
+	padding: 0 15px 0 0px;
+	display: inline-block;
+	max-width: 750px;
+	min-width: 450px;
+}
+.entry-header .author-time {
+	color: #aaaaaa;
+	font-size: 12px;
+	margin: 4px 0;
+}
+.entry-header .author-time a {
+	color: inherit;
+}
+.author-time a:hover {
+	color: #ff5f3e;
+}
+.article-container .labels {
+	color: #aaaaaa;
+	font-size: 12px;
+	position: absolute;
+	bottom: 70px;
+}
+.article-container .labels a {
+	color: #333333;
+}
+.article-container .labels a:hover {
+	text-decoration: underline;
+	color: #FF5F3E;
+}
+/* = Single Like,Comment,Share
+-------------------------------------------- */
+.entry-meta {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-left: -25px;
+}
+.entry-meta-fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+}
+.entry-meta-fixed .like-comment-share {
+	margin: 0 100px 0 325px;
+}
+.like-comment-share {
+	color: #333;
+	height: 20px;
+	padding: 10px 0;
+	font-size: 12px;
+	min-width: 580px;
+	background-color: #eee;
+	border-top: 2px solid #E7E7E7;
+}
+.like-comment-share ul {
+	height: 16px;
+	float: left;
+	margin-left: 25px;
+	line-height: 16px;
+}
+.like-comment-share li {
+	float: left;
+	overflow: hidden;
+}
+.like-comment-share li .separate {
+	color: #999;
+	padding: 0 20px;
+}
+.like-comment-share li a {
+	display: inline-block;
+	height: 12px;
+	line-height: 10px;
+	color: inherit;
+	padding-left: 15px;
+	background-image: url(../images/ued-sprites.png);
+	background-repeat: no-repeat;
+}
+.like-comment-share li a:hover {
+	text-decoration: underline;
+}
+.like-comment-share .like a {
+	background-position: 0 0;
+}
+.like-comment-share .comment a {
+	background-position: 0 -35px;
+}
+.like-comment-share .share a {
+	background-position: 0 -71px;
+}
+.like-comment-share .like a:hover {
+	background-position: 0 -18px;
+}
+.like-comment-share .comment a:hover {
+	background-position: 0 -53px;
+}
+.like-comment-share .share a:hover {
+	background-position: 0 -89px;
+}
+.edit-link {
+	float: right;
+	margin-right: 25px;
+}
+.edit-link a {
+	font-size: 12px;
+	color: #404040;
+}
+.edit-link a:hover {
+	color: #FF5F3E;
+	text-decoration: underline;
+}
+/* END ----------------------------- */
+
+.article-nav {
+	margin: 30px 0 50px;
+	overflow: hidden;
+	font-size: 0;
+}
+.article-nav .nav-item {
+	display: inline-block;
+	width: 41px;
+	height: 41px;
+	background: #eee url(../images/ued-sprites.png) no-repeat;
+}
+.article-nav .nav-pre {
+	background-position: 16px -369px;
+}
+.article-nav .nav-next {
+	margin-left: 10px;
+	background-position: -37px -369px;
+}
+.article-nav a {
+	float: left;
+	width: 100%;
+	height: 100%;
+	background: #cccccc url(../images/ued-sprites.png) no-repeat;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+}
+.article-nav a:hover {
+	background-color: #ff5f3e !important;
+}
+.article-nav .nav-pre a {
+	background-position: 16px -440px;
+}
+.article-nav .nav-next a {
+	background-position: -37px -440px;
+}
+/* = Comments
+----------------------------------------------- */
+.highlight {
+	color: #FF5F3E;
+}
+.disable-comment .op {
+	display: none;
+}
+.separate-line {
+	height: 1px;
+	background: url(../images/line-bg.png) repeat-x;
+}
+.comment-anchor, .respond-anchor {
+	margin-top: -40px;
+	display: inline-block;
+}
+.comments-closed, .not-login {
+	color: #aaaaaa;
+	font-size: 12px;
+	padding: 14px 0;
+}
+#comments {
+	color: #aaa;
+	font-size: 12px;
+	line-height: 18px;
+	position: relative;
+}
+#comments a {
+	color: #FF5F3E;
+}
+#comments-title {
+	padding-bottom: 14px;
+}
+#comments .separate-line {
+	position: relative;
+	bottom: -14px;
+}
+#comments .title-all {
+	margin-right: 15px;
+	display: inline-block;
+}
+#comments .social-login {
+	margin-left: 15px;
+	display: inline-block;
+}
+#comments .social-login .weibo-login {
+	display: inline-block;
+	height: 16px;
+	padding-left: 20px;
+	background: url(../images/ued-sprites.png) 0 -238px no-repeat;
+}
+#comments .current-user {
+	display: inline-block;
+	margin-left: 15px;
+}
+#comments .loginout {
+	color: inherit;
+	margin-left: 5px;
+}
+#comments .loginout:hover {
+	color: #FF5F3E;
+}
+#comments .comment {
+	padding: 18px 0;
+	position: relative;
+}
+#comments .comment:hover {
+	background-color: #fffaee;
+}
+#comments .children .comment-content {
+	margin-left: 92px;
+}
+#comments .children .avatar-container {
+	left: 50px;
+}
+#comments .comment:hover .op {
+	visibility: visible;
+}
+#comments .comment .separate-line {
+	bottom: -18px;
+	clear: left;
+}
+#comments .avatar-container {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	overflow: hidden;
+	left: 10px;
+}
+#comments .row-1 {
+	margin-top: -4px;
+}
+#comments .row-1 .words {
+	color: #666;
+}
+#comments .row-1 .op {
+	visibility: hidden;
+	text-decoration: underline;
+	margin-left: 5px;
+}
+#comments .comment-content {
+	margin-left: 52px;
+}
+#comments .date {
+	margin-top: 4px;
+}
+#respond {
+	font-size: 12px;
+	padding-top: 20px;
+	margin: 0 10px;
+	position: relative;
+}
+#respond .comment-avatar {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	overflow: hidden;
+}
+#respond .input-container {
+	margin-left: 40px;
+	position: relative;
+}
+#respond .comment {
+	margin: 0;
+	width: 98%;
+	border: 1px solid #DDDDDD;
+	resize: vertical;
+	padding: 8px 10px 38px;
+	height: 80px;
+	overflow: auto;
+	color: #333;
+	background: #ffffff url(../images/comment-input-bg.png) bottom repeat-x;
+}
+#respond .toolbar {
+	height: 17px;
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	width: 95%;
+	padding: 7px;
+	background-color: #f5f5f5;
+}
+#respond .toolbar .replyto {
+	background: #ff5f3e;
+	float: left;
+	height: 18px;
+	display: none;
+}
+#respond .replyto a {
+	float: left;
+	line-height: 16px;
+	height: 100%;
+	color: #ffffff;
+}
+#respond .replyto .author-to-reply {
+	padding: 0 5px;
+}
+#respond .replyto .del-replyto {
+	width: 18px;
+	border-left: 1px dotted white;
+	background: url(../images/ued-sprites.png) -58px -341px no-repeat;
+}
+#respond .emotion {
+	float: left;
+	padding-left: 20px;
+	height: 18px;
+	line-height: 18px;
+	color: #555555;
+	background: url(../images/ued-sprites.png) 4px -602px no-repeat;
+}
+#respond .emotion:hover {
+	color: #FF5F3E;
+	background-position: 4px -602px;
+}
+#respond .op-container {
+	margin-left: 40px;
+	padding-top: 10px;
+}
+#respond .submit {
+	margin: 0;
+	border: none;
+	height: 23px;
+	width: 52px;
+	cursor: pointer;
+	background-color: #ff9079;
+	color: #ffffff;
+	-webkit-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-o-transition: background-color 0.2s linear;
+}
+#respond .submit:hover {
+	background-color: #FF5F3E;
+}
+#respond .submit-disable {
+	background-color: #cccccc !important;
+}
+#respond .share {
+	margin-left: 18px;
+}
+#respond .share a {
+	color: #aaaaaa;
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	padding-left: 22px;
+	background: url(../images/ued-sprites.png) 3px -266px no-repeat;
+}
+#respond .share a:hover, #respond .share a.active {
+	color: #FF5F3E;
+	background-position: 3px -238px;
+}
+#respond .share input {
+	margin: -2px 0 0;
+	vertical-align: middle;
+}
+/* = About
+----------------------------------------------- */
+#content .about {
+	max-width: 740px;
+	background-color: #ffffff;
+	padding: 30px 30px 50px;
+	min-height: 520px;
+	height: auto;
+	color: #666666;
+}
+#content .about .intro-title {
+	height: 24px;
+	font-size: 18px;
+}
+#content .about .intro-describe {
+	line-height: 20px;
+	font-size: 12px;
+	text-indent: 24px;
+	margin-top: 15px;
+}
+.about .members {
+	margin-top: 150px;
+	position: relative;
+	float: left;
+}
+.about .members-opened {
+	margin-top: 76px !important;
+	-webkit-transition: margin-top 0.3s linear;
+	-moz-transition: margin-top 0.3s linear;
+	-o-transition: margin-top 0.3s linear;
+}
+.about .open-all {
+	width: 41px;
+	height: 41px;
+	display: inline-block;
+	top: -54px;
+	left: 0;
+	position: absolute;
+	background: #cccccc url(../images/ued-sprites.png) 8px -321px no-repeat;
+}
+.about .open-all:hover {
+	background-color: #ff5f3e;
+}
+.about .avatar-container {
+	margin: 0 7px 0 13px;
+	float: left;
+}
+.about .avatar-container li {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px 5px 0;
+	float: left;
+	display: none;
+	background-color: #ff5f3e;
+	background-repeat: no-repeat;
+}
+.about .avatar-container a {
+	height: 100%;
+	width: 100%;
+	float: left;
+	display: none;
+}
+.about .avatar-container-ued {
+	width: 600px;
+	height: 160px;
+	position: relative;
+	margin-left: 70px;
+}
+.about .avatar-container-ued li {
+	position: absolute;
+}
+/* = Not Found
+----------------------------------------------- */
+#content .not-found {
+	width: 800px;
+	padding: 50px 0;
+}
+.not-found .container-1 {
+	padding-left: 100px;
+}
+.not-found .container-2 {
+	margin-top: 20px;
+}
+/* = Back To Top
+----------------------------------------------- */
+.back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	z-index: 150;
+	height: 100%;
+}
+.back-to-top a {
+	display: inline-block;
+	height: 41px;
+	width: 41px;
+	bottom: 50px;
+	right: 0;
+	cursor: pointer;
+	position: absolute;
+	background: #cccccc url(../images/ued-sprites.png) -43px -268px no-repeat;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+}
+.back-to-top a:hover {
+	background-color: #ff5f3e;
+}
+/* = Promot
+----------------------------------------------- */
+.promot {
+	position: fixed;
+	bottom: 100px;
+	width: 100%;
+	display: none;
+	text-align: center;
+}
+.promot .promot-content {
+	padding: 4px 8px;
+	border: 1px solid #FF5F3E;
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 14px;
+	display: inline-block;
+	background-color: #FF5F3E;
+	margin-left: 150px;
+	box-shadow: 0 0 5px #ccc;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=3)";
+*filter: 
+ progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee, direction=0, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd, direction=90, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd, direction=180, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee, direction=270, strength=3);
+}
+/* = Footer
+----------------------------------------------- */
+.footer-container {
+	font-size: 0;
+	margin: 22px 0 0 325px;
+}
+.footer-container a {
+	color: #777;
+	font-size: 12px;
+	line-height: 14px;
+}
+.footer-container a:hover {
+	color: #FF5F3E;
+}
+.footer-container .more {
+	font-family: Arial;
+}
+.footer-container .title {
+	color: #666;
+	font-size: 18px;
+	font-family: Microsoft YaHei;
+	line-height: 20px;
+	height: 20px;
+	padding: 8px 0;
+	width: 100%;
+}
+.footer-container li {
+	display: inline-block;
+	padding-top: 9px;
+	width: 135px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.footer-container .more-links {
+	margin-top: 9px;
+	display: inline-block;
+}
+.footer-container .column {
+	display: inline-block;
+	padding-left: 10px;
+	width: 270px;
+	margin-bottom: 32px;
+	vertical-align: top;
+}
+.footer-container .col-1 {
+	margin-right: 20px;
+}
+.footer-container .col-2 {
+}
+.footer-container .col-1 ul {
+	float: left;
+	overflow: hidden;
+}
+.footer-container .col-1 ul.heighted {
+	height: 163px;
+}
+.footer-container .col-2 .hot-tags {
+	width: 210px;
+}
+.col-2 .hot-tags a {
+	display: inline-block;
+	padding-top: 9px;
+	line-height: 14px;
+}
+.dian {
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	vertical-align: bottom;
+	background: url("../images/ued-sprites.png") -63px -703px no-repeat !important;
+}
+.bottom-search {
+	margin-top: 18px;
+	float: left;
+}
+.footer-bottom {
+	width: inherit;
+	padding: 7px 0 5px;
+	max-width: 880px;
+	_width: 880px;
+	border-top: 1px solid #666;
+}
+.footer-bottom .col-logo {
+	margin: 0 14px 0 5px;
+	display: inline-block;
+}
+.footer-bottom .col-rights {
+	color: #AAA;
+	display: inline-block;
+	font-size: 10px;
+	line-height: 15px;
+	margin: 0 5px 0 5px;
+	vertical-align: top;
+}
+.footer-bottom .col-sites {
+	display: inline-block;
+}
+.footer-bottom .col-sites a {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	text-decoration: none;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-image: url("../images/ued-sprites.png");
+}
+.footer-bottom .col-sites .rss {
+	background-position: 0 -142px;
+}
+.footer-bottom .col-sites .twitter {
+	background-position: -24px -142px;
+}
+.footer-bottom .col-sites .weibo {
+	background-position: -52px -142px;
+}
+.footer-bottom .col-sites .rss:hover {
+	background-position: 0 -177px;
+}
+.footer-bottom .col-sites .twitter:hover {
+	background-position: -24px -177px;
+}
+.footer-bottom .col-sites .weibo:hover {
+	background-position: -52px -177px;
+}
+/* = Social Connect
+----------------------------------------------- */
+#wb_connect_btn {
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: bottom;
+}

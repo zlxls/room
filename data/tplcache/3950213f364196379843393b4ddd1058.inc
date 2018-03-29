@@ -1,0 +1,1 @@
+<li><a href="[field:typelink/]" class="" target="_self">[field:typename/]</a></li>

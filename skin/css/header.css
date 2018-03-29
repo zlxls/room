@@ -1,0 +1,111 @@
+﻿/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+/*
+* header.css
+* zhangling 20150907
+*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+#header {
+	background: url(../images/newgif.gif?v=12) repeat-x 0 -666px;
+	color: #fff;
+	overflow: hidden;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+}
+#header .headerBox {
+	width: 1180px;
+	height: 50px;
+	overflow: hidden;
+	margin: auto;
+}
+#header .headerMapBox {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	padding: 0 30px;
+	margin: auto;
+}
+#header .nav li {
+	float: left;
+	font-size: 16px;
+}
+#header .nav li a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: 16px 24px 17px;
+	font-family: '\5FAE\8F6F\96C5\9ED1';
+}
+#header .nav > li > a:hover, #header .nav > li > a:focus {
+	background-color: transparent;
+}
+#header .nav li.hover, #header .nav li:hover {
+	background: #b30000 url(../images/navjt.gif) no-repeat center bottom;
+}
+#header .nav .haowu_icon:hover, #header .nav .area_btn:hover {
+	background: none;
+}
+#header .nav .haowu_icon {
+	padding: 12px 30px 15px 0;
+}
+#header .nav .haowu_icon a {
+	padding: 0;
+}
+#header .nav .area_btn {
+	border: 1px solid #e1e1e1;
+	border-radius: 12px;
+	margin-right: 40px;
+	padding: 0 8px 2px;
+	margin-top: 14px;
+}
+#header .nav .area_btn a {
+	padding: 0;
+}
+#header .nav .area_btn img {
+	margin-left: 7px;
+	vertical-align: middle;
+}
+#header .login {
+	font-size: 14px;
+	/*height: 24px;*/
+	line-height: 14px;
+	margin-top: 10px;
+}
+#header .login span {
+	color: #999;
+}
+#header .login a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+}
+.loginHidden {
+	display: none;
+}
+.nav > li > a {
+	padding: 0;
+}
+/*#main {*/
+    /*float: none;*/
+    /*clear: both;*/
+    /*margin: 70px auto 0;*/
+    /*width: 1180px;  */
+/*}*/
+
+#main {
+	margin-top: 50px;
+}
+.tel {
+	display: none;
+	font-size: 24px;
+	line-height: 50px;
+	color: #e7e7e7
+}

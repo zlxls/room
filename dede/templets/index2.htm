@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="skin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="skin/css/jquery.dialog.css" />
+<link rel="stylesheet" href="skin/css/index.css" />
+
+<title><?php echo $cfg_webname; ?>-<?php echo $cfg_softname." ".$cfg_version; ?></title>
+<script>
+function switchSysBar(){ 
+var locate=location.href.replace('index.html','');
+var ssrc=document.all("img1").src.replace(locate,'');
+if (ssrc=="skin/images/toleft.png")
+{ 
+document.all("img1").src="skin/images/toright.png";
+document.all("frmTitle").style.display="none" 
+} 
+else
+{ 
+document.all("img1").src="skin/images/toleft.png";
+document.all("frmTitle").style.display="" 
+} 
+} 
+</script>
+
+
+</head>
+
+<body>
+<div id="container">
+	<div id="hd">
+    	<div class="hd-wrap ue-clear">
+        	<div class="top-light"></div>
+            <a href=""><h1 class="logo"></h1></a>
+            <div class="login-info ue-clear">
+                <div class="welcome ue-clear"><span>欢迎您,</span><a href="javascript:;" class="user-name"><?php echo $cuserLogin->getUserName(); ?></a></div>
+                <div class="login-msg ue-clear">
+                    <a href="diy_list.php?action=list&diyid=1" class="msg-txt" target="main">消息</a>
+                </div>
+            </div>
+            <div class="toolbar ue-clear">
+                <a href="../index.php?upcache=1" class="home-btn" target="_blank">首页</a>
+                <a href="javascript:;" class="quit-btn exit"></a>
+            </div>
+        </div>
+    </div>
+    <div id="bd">
+    	<div class="wrap ue-clear">
+        	<div class="sidebar" id="frmTitle" name="fmTitle" style="overflow:hidden">
+            	<h2 class="sidebar-header"><p>功能导航</p></h2>
+                
+                
+                
+                	<iframe src="index_menu.php" id="menufra" name="menu" frameborder="0" scrolling="no" width="100%" onLoad="iFrameHeight()" height="100%" noresize="noresize"></iframe>
+                    
+                    
+             
+            </div>
+            <div class="content">
+            	<div class="toleft" onclick=switchSysBar()><SPAN class=navPoint 
+id=switchPoint title=关闭/打开左栏><img src="skin/images/toleft.png" width="6" height="46"  name="img1" id="img1"/></SPAN></div>
+
+                <iframe id="iframe" name="main" width="100%" height="100%" frameborder="0" src="index_body.php"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="ft" class="ue-clear">
+    	<div class="ft-left">
+            <span>赞赞网络</span>
+            <em>Fangcms.cn&nbsp;System</em>
+        </div>
+        <div class="ft-right">
+            <span><a href="http://www.fangcms.cn" target="_blank" style="color:#fff">网站技术支持</a></span>
+            
+        </div>
+    </div>
+</div>
+<div class="exitDialog">
+	<div class="dialog-content">
+    	<div class="ui-dialog-icon"></div>
+        <div class="ui-dialog-text">
+        	<p class="dialog-content">你确定要退出系统？</p>
+            <p class="tips">如果是请点击“确定”，否则点“取消”</p>
+            
+            <div class="buttons">
+                <input type="button" class="button long2 ok" value="确定" />
+                <input type="button" class="button long2 normal" value="取消" />
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="skin/js/jquery.js"></script>
+<script type="text/javascript" src="skin/js/common.js"></script>
+<script type="text/javascript" src="skin/js/core.js"></script>
+<script type="text/javascript" src="skin/js/jquery.dialog.js"></script>
+<script type="text/javascript" src="skin/js/index.js"></script>
+
+</html>

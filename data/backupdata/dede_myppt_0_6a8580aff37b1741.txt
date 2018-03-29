@@ -1,0 +1,3 @@
+INSERT INTO `dede_myppt` VALUES('1','1','0','幻灯1','/uploads/160119/1-160119200920941.jpg','#');
+INSERT INTO `dede_myppt` VALUES('2','1','1','幻灯2','/uploads/160119/1-160119200Z2141.jpg','#');
+INSERT INTO `dede_myppt` VALUES('3','1','2','幻灯3','/uploads/160119/1-160119200T1B3.jpg','#');

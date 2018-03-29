@@ -1,0 +1,1 @@
+INSERT INTO `dede_co_num` VALUES('1','3','1327161600','0');

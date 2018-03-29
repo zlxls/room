@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html ng-app="housesApp">
+    <head>
+        <meta charset="utf-8">
+        <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/skin/css/base.css" />
+        <link rel="stylesheet" href="/skin/css/common.css" />  
+        <link rel="stylesheet" href="/skin/css/houses.css">
+        <link rel="stylesheet" href="/skin/css/bootstrap.css">
+        
+            <link rel="stylesheet" href="/skin/css/header.css">
+    <link rel="stylesheet" href="/skin/css/backtop.css">
+    <link rel="stylesheet" href= "/skin/css/footer.css">
+</head>
+<body>
+
+
+<script src="/skin/js/jquery.min.js"></script>
+<script src="/skin/js/placeholder.js"></script>
+<script src="/skin/js/mask.js"></script>
+<script src="/skin/js/dialog.js"></script>
+<script src="/skin/js/alert.js"></script>
+
+
+	<!-- container: begin -->
+	<div id="container">
+		<!-- header: begin -->
+		{dede:include filename="header.htm"/}
+		<!-- header: end -->
+
+		<!-- main: begin -->
+		<div id="main"> 
+        <div class="">
+            
+
+            <div class="container">
+                <div class="params-box">
+                    <div class="param-item">
+                        <label>海南区域：</label>
+                        {dede:channel type='son' currentstyle="<a href='~typelink~' class='current'>~typename~</a>"}
+            <a href="[field:typelink/]">[field:typename/]</a>
+            {/dede:channel}
+                    </div>
+                    {dede:php} AddFilter(2,1,'jiagequjian,loupanleixing'); {/dede:php}
+                    
+                    <!-- 增加面积筛选字段 -->
+
+                    
+                </div>
+                <div class="top10">
+                        <div class="hot-box">
+                        <h4 class="">热门楼盘</h4>
+                        <!-- TOP10 -->
+                        <div class="hot-list">
+                           {dede:arclist typeid='1' row='10' titlelen='50' orderby='hot' addfields='qijia' channelid='2' }
+                            <div class="hot-item">
+                                <a href="[field:arcurl/]" target="_blank">
+                                    <span class="order order-top[field:global.autoindex/]">[field:global.autoindex/]</span>
+                                    <span class="houseName" title="[field:title/]">[field:title/] </span>
+                                    <span class="unit pull-right">[field:qijia/]元/㎡</span></a>
+                            </div>
+                           {/dede:arclist} 
+                      </div>
+                    </div>
+                                        <div class="poster">              
+                        <div class="img-list">
+                                                    </div>
+                        <div class="player">
+                                                    </div>
+                    </div>
+                        <div class="hot-box">
+                        <h4 class="">最新楼盘</h4>
+                        <!-- TOP10 -->
+                        <div class="hot-list">        
+                               {dede:arclist typeid='1' row='10' titlelen='50' addfields='qijia' channelid='2' }
+                                <div class="hot-item">
+                                    <a href="[field:arcurl/]" target="_blank">
+                                        <span class="order order-top[field:global.autoindex/]">[field:global.autoindex/]</span>
+                                        <span class="houseName" title="[field:title/]">[field:title/] </span>
+                                        <span class="unit pull-right">[field:qijia/]元/㎡</span></a>
+                                </div>
+                               {/dede:arclist}                            
+                        </div>
+                    </div>
+                                    </div>
+                <div class="main-list">
+                    <div class="sort">
+                        <ul id="tab" class="tab main-tab">
+                            <li class="active"><a onFocus="this.blur();">全部楼盘</a></li>
+                                                   </ul>
+                        <div class="param-sort cf">
+                            <span class="searchHouseNo fl">本网共合作<span class="color_orange">{dede:sql sql="select count(ID) as c from dede_archives where channel=2"}[field:c /]{/dede:sql}</span>个楼盘</span>
+                            
+                        </div>
+                    </div>
+                    <div id="housesList" class="list-body">
+                                                    
+                                                
+                                                
+                             {dede:list pagesize='10'}             
+                             <div class="house-item">
+                                <div class="buy-type">
+                                    <img width="30" src="/skin/images/tuan.png" alt="团购楼盘"/>
+                                    <img width="30" src="/skin/images/du.png" alt="独家代理"/>
+                                </div>
+                                 <a href="[field:arcurl/]" target="_blank">
+                                <img width="200" height="150" src="[field:litpic/]" alt="[field:title/]">
+                                 </a>
+                                <h5>
+                                     <a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+                                </h5>
+								<h5 class="product-list">
+                                    <span>[field:tyouhui/]</span>
+                                </h5>
+								    <label class="marker">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                    [field:lopandizhi/]                             
+                                    </label>
+                                <label class="unit-title pull-right">
+                                    <span>[field:qijia/]</span> 元/㎡
+                                    </label>
+                                <br/>
+                                [field:id function=GetTags(@me)/]    
+                            </div>
+                           {/dede:list}                      
+                                                
+                                                
+                                                
+                                                
+                                        </div>
+                    <div class="page-box">
+
+                        <div class="page">
+                         {dede:pagelist listitem="pre,next,pageno" listsize="5"/}
+                        </div>
+                     </div></div>                                
+                </div>
+            </div>
+                        <div class="container">
+                <div class="interest">
+                    <h4>你可能感兴趣的楼盘</h4>
+                    <div class="interest-list">
+                    
+                    {dede:arclist typeid='1' row='3' titlelen='50' orderby='rand' addfields='qijia' channelid='2'}
+                            <div class="interest-item">
+                            <a href="[field:arcurl/]" target="_blank">
+                            <img src="[field:litpic/]" height="240" width="320" alt="[field:title/]"/>
+                            <div class="interest-title">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                [field:typename/]                                
+                                <div class="tab-list pull-right"></div>
+                            </div>
+                            <div  class="interest-info">
+                                <label>[field:title/]</label>
+                                <div>
+                                    <label class="unit pull-right"><span>[field:qijia/]</span> 元/㎡
+                                    </label>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                                                
+                       {/dede:arclist}                         
+                 </div>
+                </div>
+            </div>
+                    </div>
+        <!-- 返回顶部 -->
+        <!-- back to top : begin -->
+<div class="widget">
+	<a href="/m" class="phone">
+		<img src="/skin/images/phone.png" alt="">
+		<span>手机版</span>
+	</a>
+	<a href="#header" class="backTop">
+		<img src="/skin/images/backtop.png" alt="">
+	</a>
+</div>
+<!--  back to top : end -->        	</div>
+    	<!-- main: end -->
+    	<!-- footer: begin -->
+    	{dede:include filename="footer.htm"/}
+    	<!-- footer: end -->
+
+    </div>
+    <!-- container: end -->
+
+    <script src="/skin/js/jquery.min.js"></script>
+    <script src="/skin/js/placeholder.js"></script>
+    <script src="/skin/js/backtop.js"></script>        <script> var baseUrl = '/lists/'; </script>
+        <script src="/skin/js/jquery.min.js"></script>
+        <script src="/skin/js/houseslist.js"></script>
+    </body>
+
+</html>

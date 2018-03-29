@@ -1,0 +1,23 @@
+<div id="header" name="header" class="cf">
+			<div class="headerBox">
+				<div class="fl">
+					<ul class="nav cf">
+						<li class="haowu_icon"><a href="/"><img src="/skin/images/haowu_across.png" alt=""></a></li>
+			
+						<li  {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='hover' ":@me="";{/dede:field}><a href="/">首页</a></li>
+						{dede:channel type='top' row='3' currentstyle="<li class='hover'><a href='~typelink~'>~typename~</a></li>"}<li><a href="[field:typelink/]" class="" target="_self">[field:typename/]</a></li>{/dede:channel}
+					</ul>
+				</div>
+				<div class="login fr">
+					<div class="group filter-input has-feedback">
+                        <form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+                            <input type="hidden" name="kwtype" value="0" />
+                            <input name="q" type="text" id="search-keyword" class="form-control filter-input  searchkey" value="" placeholder="请输入楼盘名/资讯等"/>
+
+                            <button type="submit" class="glyphicon glyphicon-search form-control-feedback pointer" style="background:none; border:none; color:#333"></button>
+                        </form>
+                    </div>
+				</div>
+                <div class="tel fr">TEL:{dede:global.cfg_tels/}</div>
+			</div>
+</div>

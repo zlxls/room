@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>{dede:global.cfg_webname/}</title>
+<link href="/m/skin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/swiper.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="bookmark" href="favicon.ico" />
+<style type="text/css"></style>
+</head>
+<body>
+
+<!--header-->
+<header> 
+
+<div class="logo f-left"><img src="/m/skin/images/logo.png" width="82" height="20" /></div>
+
+  <span class="tb_city f-left" id="citylist"> <a  href="javascript:void(0);">昭通   <i class="Hui-iconfont">&#xe6d5;</i></a> </span> 
+
+  <a class="tb_navigation Hui-iconfont" href="javascript:void(0);">&#xe681;</a>
+      <div class="topnav pointer_li2">
+        <ul>
+            <li><a href="/m">首页</a></li>
+              {dede:channel type='top' row='2'}
+              <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+              {/dede:channel} 
+            
+        </ul>
+        <div class="clear"></div>
+    </div>
+  <div class="clear"></div>
+  <!--地市-->
+  <div class="topnav pointer_li">
+    <ul>
+    
+       
+        {dede:channel type='son' typeid='1' row='10' currentstyle="<li><a class='active' href='list.php?tid=~id~' ~rel~><span>~typename~</span></a></li>"}
+		  <li><a href='list.php?tid=[field:id/]' [field:rel/]>[field:typename/]</a></li>
+          {/dede:channel}
+    </ul>
+    <div class="clear"></div>
+</div>
+  <!--地市 end-->
+</header>
+<!--header end--> 
+<!--banner-->
+<div class="banner" style="height:120px;position: relative; overflow: hidden;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img class="scrollLoading" src="/m/skin/images/m1.jpg"   height=120></a></div>
+    <div class="swiper-slide"><a href="#"><img class="scrollLoading" src="/m/skin/images/m2.jpg"   height=120></a></div>
+    <div class="swiper-slide"><a href="#"><img class="scrollLoading" src="/m/skin/images/m3.jpg"   height=120></a></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"  style="position:absolute;bottom:0px;"></div>
+</div>
+<!--banner--> 
+<!--nav
+<nav class="backfff">
+  <figure> <a href="/m/list.php?tid=1"><img src="/m/skin/images/home_wap.png" height="50" width="50" />
+    <figcaption>新房</figcaption>
+    </a> </figure>
+  <figure> <a href="/m/list.php?tid=13"><img src="/m/skin/images/yhz_wap.png" height="50" width="50" />
+    <figcaption>三亚精品</figcaption>
+    </a> </figure>
+  <figure> <a href="/m/list.php?tid=2"><img src="/m/skin/images/news_wap.png" height="50" width="50" />
+    <figcaption>楼市资讯</figcaption>
+    </a> </figure>
+  <figure> <a href="tel:{dede:global.cfg_tels/}"><img src="/m/skin/images/kehu_wap.png" height="50" width="50" />
+    <figcaption>在线咨询</figcaption>
+    </a> </figure>
+  <div class="clear"></div>
+</nav>
+-->
+<!--nav end--> 
+<!--list
+<section class="list mt20 backfff">
+  {dede:arclist row='4' titlelen='80' typeid='2'}
+  <figure> 
+    <a href="view.php?aid=[field:id/]"> 
+    <figcaption> <span class="color01">[field:title/]</span> [field:info/]</figcaption>
+    </a> 
+  </figure>
+ {/dede:arclist}
+  <div class="clear"></div>
+</section>
+-->
+<!--list end--> 
+<!--you_like-->
+<div class="you_like mt20 backfff">
+  <h3 class="title">热销楼盘</h3>
+  {dede:arclist pagesize='10' typeid='1' addfields='hotcity,zlhuxing,junjia' channelid='2'}
+  <a href="view.php?aid=[field:id/]">
+  <dl>
+    <dt><img class="scrollLoading" src="[field:litpic/]" /></dt>
+    <dd> <strong class="thlist_name">[field:title/]<!--<em class="tuan_ico"></em>--></strong>
+      <div class="you_like_infor"> <span class="f-left">[[field:typename/]]</span>
+        <div class="price f-right">[field:junjia/]元/平</div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="discount">[field:zlhuxing/]</div>
+    </dd>
+  </dl>
+  </a> 
+ {/dede:arclist}
+ 
+ </div>
+
+{dede:include filename="footer_m.htm"/}
+
+</body>
+</html>
+<script type="text/javascript" src="/m/skin/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/jquery.scrollloading.js"></script>
+<script>
+    $(function () {
+        $('.close').on('click', function () {
+            $(this).parent().hide();
+        })
+        $(".scrollLoading").scrollLoading();
+        $('#citylist').on('click', function () {
+            $('.pointer_li').toggle();
+            $('.black').toggle();
+        })
+		
+		$('.tb_navigation').on('click', function () {
+            $('.pointer_li2').toggle();
+            $('.black').toggle();
+        })
+	
+		
+		
+       
+        var swiper = new Swiper('.banner', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+    })
+</script>

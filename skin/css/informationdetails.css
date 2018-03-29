@@ -1,0 +1,118 @@
+﻿
+/* container
+   ========================================== */
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+#main {
+    float: none;
+    clear: both;
+    margin: 53px auto;
+    width: 1180px;
+}
+#bodyMain {
+    width: 100%;
+    clear: both;
+}
+#leftMain {
+    float: left;
+    width: 850px;
+}
+
+
+
+/*文章正文*/
+.article {
+    padding: 20px 0;
+    background: #ffffff;
+}
+.article-head {
+    padding: 10px 30px 15px;
+    border-bottom: 1px dashed #e1e1e1;
+}
+.article-tit {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #333333;
+}
+.article-sub {
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+
+.article-main {
+    margin: 20px 30px;
+}
+.article-main p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #333;
+}
+.article-main img {
+    display: block;
+    max-width: 640px;
+    margin-left: 0;
+}
+.article-main .imgInfo {
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+}
+.article-main .brtBack {
+    float: right;
+    font-size: 14px;
+    color: #666666;
+}
+
+/*最新咨询*/
+.newInfo {
+    width: 100%;
+    background: #fff;
+}
+.newInfo-head {
+    height: 50px;
+    padding: 10px;
+    background: #f7f7f7;
+}
+.newInfo-tit {
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 10px;
+    color: #333;
+}
+.newInfo-main {
+    margin-top: 20px;
+    padding: 0 12px 3px 0;
+    background: url("../images/li-bg.png") repeat-y 12px 4px;
+}
+.newInfo-list {
+    display: block;
+    padding-left: 30px;
+}
+.newInfo-list li {
+    height: 56px;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #e1e1e1;
+}
+.newInfo-list .newDate {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+.newInfo-list .newTit {
+    display: block;
+    padding-top: 3px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #333;
+    font-weight: bold;
+}
+
+

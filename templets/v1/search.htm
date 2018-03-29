@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<!--[if lte IE 8]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+<title>搜索页_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="/skin/css/base.css" />
+<link rel="stylesheet" href="/skin/css/common.css" />
+<link rel="stylesheet" href="/skin/css/header.css">
+<link rel="stylesheet" href="/skin/css/backtop.css">
+<link rel="stylesheet" href= "/skin/css/footer.css">
+</head>
+<body>
+<script src="/skin/js/jquery.min.js"></script> 
+<script src="/skin/js/placeholder.js"></script> 
+<script src="/skin/js/mask.js"></script> 
+<script src="/skin/js/dialog.js"></script> 
+<script src="/skin/js/alert.js"></script> 
+<script src="/skin/js/login.js"></script>
+
+<!-- container: begin -->
+<div id="container"> 
+  <!-- header: begin --> 
+  {dede:include filename="header.htm"/} 
+  <!-- header: end --> 
+  
+  <!-- main: begin -->
+  <div id="main">
+    <link rel="stylesheet" href="/skin/css/bootstrap.css">
+    <link rel="stylesheet" href="/skin/css/basics.css">
+    <link rel="stylesheet" href="/skin/css/informationlist.css">
+    
+    <!--焦点图-->
+    
+    <div id="bodyMain" class="clear mt15"> 
+      <!--主体-->
+      <div id="leftMain">
+        <div class="navBar box" style="padding:13px; font-size:16px;"> 
+        搜索 <strong class="fc_03c" style="color:#ff0000">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果 
+        </div>
+        
+        <!--新闻列表-->
+        <div class="newList">
+        {dede:list pagesize='20' titlelen='70'}
+          <div class="newBox box">
+            <div class="newBox-pic fl"> <a href="[field:arcurl/]"><img src="[field:litpic/]" alt="" width="160" height="120"></a> </div>
+            <div class="newBox-info fr">
+              <h4 class="newBox-info-tit"> <a href="[field:arcurl/]">[field:title/]</a></h4>
+              <p class="newBox-info-sub">分类：[field:typename/]　　发布时间：[field:pubdate function=MyDate('y-m-d',@me)/]</p>
+              <p class="newBox-info-preface"> [field:description/]...</p>
+            </div>
+          </div>
+        {/dede:list}
+          
+          
+          
+        </div>
+        
+     
+         <div class="mm">
+                     {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+ 
+        </div><!-- /pages --> 
+
+
+
+   
+        <br />
+      </div>
+      
+      <!--侧栏-->
+      <div id="aside"> 
+        <!--推荐活动-->
+        <div class="asideBar box">
+          <div class="asideBar-head">
+            <h3 class="asideBar-tit">相关搜索</h3>
+          </div>
+          <div class="asideBar-main"> 
+            <!--列表-->
+            
+            <div class="actionList">
+              
+              <div class="actionList-li">
+                <p>{dede:likewords num='8'/}</p>
+              </div>
+       
+              
+            </div>
+          </div>
+        </div>
+        
+        <!--App下载-->
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- back to top : begin -->
+  <div class="widget"> <a href="/m" class="phone"> <img src="/skin/images/phone.png" alt=""> <span>手机版</span> </a> <a href="#header" class="backTop"> <img src="/skin/images/backtop.png" alt=""> </a> </div>
+  <!--  back to top : end --> 
+
+	<script>var newsCate = 0</script>
+	<script src="/skin/js/informationlist.js"></script>
+</div>
+<!-- main: end --> 
+<!-- footer: begin --> 
+{dede:include filename="footer.htm"/} 
+<!-- footer: end -->
+
+</div>
+<!-- container: end --> 
+
+<script src="/skin/js/jquery.min.js"></script> 
+<script src="/skin/js/placeholder.js"></script> 
+<script src="/skin/js/backtop.js"></script>
+</body>
+</html>

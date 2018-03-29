@@ -1,0 +1,2 @@
+INSERT INTO `dede_diyform2` VALUES('1','0','阿里','地址测试','1533333','287777@qq.com','测试内容');
+INSERT INTO `dede_diyform2` VALUES('2','0','','','','','');

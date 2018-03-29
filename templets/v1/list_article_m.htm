@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>{dede:global.cfg_webname/}</title>
+<link href="/m/skin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/swiper.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="bookmark" href="favicon.ico" />
+<style type="text/css">
+.newhouses-nav .item .dropdown-main {
+	margin-top: -30px;
+}
+.pagination {
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding-left: 0em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	border-radius: 4px;
+	font-size: 16px;
+}
+.pagination li {
+	display: inline;
+}
+.pagination a, .pagination li span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #337ab7;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+.pagination a:first-child, .pagination a:first-child span {
+	margin-left: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.pagination li:last-child a, .pagination li:last-child span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.pagination a:hover, .pagination span:hover, .pagination a:focus, .pagination span:focus {
+	color: #23527c;
+	background-color: #eee;
+	border-color: #ddd;
+}
+</style>
+</head>
+<body>
+
+<!--header-->
+<header> <a href="javascript:window.history.back();" class="tb_back Hui-iconfont" title="返回">&#xe6d4;</a>
+  <h1 class="header_title">资讯</h1>
+  <a class="tb_navigation Hui-iconfont" href="javascript:void(0);">&#xe681;</a>
+  <div class="topnav pointer_li">
+    <ul>
+      <li><a href="/m">首页</a></li>
+      {dede:channel type='top' row='10'}
+      <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="black"></div>
+</header>
+<!--header end--> 
+
+<!-- 导航 start -->
+
+<section class="news"> {dede:list pagesize='10'} <a href="view.php?aid=[field:id/]">
+  <figure> <img class="scrollLoading" src="[field:litpic/]"  height="80" width="120">
+    <figcaption>[field:title/]...</figcaption>
+    <time>[field:pubdate function=MyDate('y年-m月-d日',@me)/]</time>
+  </figure>
+  </a> {/dede:list} </section>
+<div id="AspNetPager1" class="pagination" align="left">
+  <div class="pagination" align="right" style="font-size:16px;"> </div>
+  <div align="left" class="pagination"> {dede:pagelist listitem="pre,next,index,end" listsize="5"/} </div>
+</div>
+<script type="text/javascript" src="/m/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/m/skin/js/list.js"></script> 
+<script type="text/javascript" src="/m/skin/js/swiper.jquery.min.js"></script> 
+<script type="text/javascript" src="/m/skin/js/jquery.scrollloading.js"></script> 
+<script type="text/javascript">
+    $(function () {
+        $('.tb_navigation').on('click', function () {
+            $('.topnav').toggle();
+            $('.black').toggle();
+        })
+        $(".scrollLoading").scrollLoading();
+        $('div').not('.topnav').on('click', function () {
+            $('.topnav').hide();
+            $('.black').hide();
+        })
+    })
+	</script>
+</body>
+</html>

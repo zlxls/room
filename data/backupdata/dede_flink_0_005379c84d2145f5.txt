@@ -1,0 +1,4 @@
+INSERT INTO `dede_flink` VALUES('2','1','http://www.dedecms.com','织梦CMS官方','','','','1226375403','1','2');
+INSERT INTO `dede_flink` VALUES('9','1','http://www.fangcms.cn','易居房产系统','','','','1227772717','1','2');
+INSERT INTO `dede_flink` VALUES('8','1','http://www.dede58.com','织梦58','','','','1227772703','1','2');
+INSERT INTO `dede_flink` VALUES('10','1','http://www.bieshu58.com','三亚别墅','','','','1453900299','1','2');

@@ -1,0 +1,11 @@
+{dede:pagestyle maxwidth='800' pagepicnum='6' ddmaxwidth='0' row='5' col='3' value='3'/}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223110-lp.png' text='泳池' width='893' height='612'} /uploads/allimg/160515/1-160515223110.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223115-lp.png' text='泳池' width='894' height='617'} /uploads/allimg/160515/1-160515223115.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223120-lp.png' text='图书馆' width='884' height='605'} /uploads/allimg/160515/1-160515223120.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223124-lp.png' text='业主食堂' width='500' height='629'} /uploads/allimg/160515/1-160515223124.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223127-lp.png' text='美味佳肴' width='498' height='566'} /uploads/allimg/160515/1-160515223127.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223130-lp.png' text='小区环境' width='502' height='594'} /uploads/allimg/160515/1-160515223130.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223133-lp.png' text='小区环境' width='502' height='577'} /uploads/allimg/160515/1-160515223133.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223248-lp.png' text='阳台' width='894' height='619'} /uploads/allimg/160515/1-160515223248.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223252-lp.png' text='' width='499' height='614'} /uploads/allimg/160515/1-160515223252.png {/dede:img}
+{dede:img ddimg='/uploads/allimg/160515/1-160515223255-lp.png' text='' width='499' height='613'} /uploads/allimg/160515/1-160515223255.png {/dede:img}

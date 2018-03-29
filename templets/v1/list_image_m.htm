@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>{dede:global.cfg_webname/}</title>
+<link href="/m/skin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/m/skin/css/swiper.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="bookmark" href="favicon.ico" />
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+.newhouses-nav .item .dropdown-main {
+	margin-top: -30px;
+}
+.pagination {
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding-left: 0em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.pagination li {
+	display: inline;
+}
+.pagination a, .pagination li span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #337ab7;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+.pagination a:first-child, .pagination a:first-child span {
+	margin-left: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.pagination li:last-child a, .pagination li:last-child span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.pagination a:hover, .pagination span:hover, .pagination a:focus, .pagination span:focus {
+	color: #23527c;
+	background-color: #eee;
+	border-color: #ddd;
+}
+
+</style>
+</head>
+<body>
+
+<!--header-->
+<header> <a href="javascript:window.history.back();" class="tb_back Hui-iconfont" title="返回">&#xe6d4;</a>
+  <h1 class="header_title">新房</h1>
+  <a class="tb_navigation Hui-iconfont" href="javascript:void(0);">&#xe681;</a>
+  
+  <div class="topnav pointer_li">
+        <ul>
+            <li><a href="/m">首页</a></li>
+              {dede:channel type='top' row='2'}
+              <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+              {/dede:channel} 
+            
+        </ul>
+        <div class="clear"></div>
+    </div>
+  
+  
+  
+  <div class="black"></div>
+</header>
+<!--header end--> 
+
+<!-- 导航 start -->
+<ul class="newhouses-nav">
+  <li class="item"> <a href="javascript:void(0);" class="item-name city"><span>区域</span><i class="Hui-iconfont Hui-iconfont-arrow2-bottom"></i></a>
+    <div class="dropdown">
+      <div class="dropdown-main">
+        <ul>
+          <li tag="a0" ><a href="/m/list.php?tid=1">全部</a></li>
+          {dede:channel type='son' row='10' currentstyle="<li><a class='active' href='list.php?tid=~id~' ~rel~><span>~typename~</span></a></li>"}
+		  <li><a href='list.php?tid=[field:id/]' [field:rel/]>[field:typename/]</a></li>
+          {/dede:channel}
+          
+        </ul>
+      </div>
+    </div>
+  </li>
+  
+  
+  
+</ul>
+<div class="you_like mt20 backfff" style="margin-top:10px;"> 
+
+{dede:list pagesize='10'}
+<a href="view.php?aid=[field:id/]">
+  <dl>
+    <dt><img class="scrollLoading"  src="[field:litpic/]"/></dt>
+    <dd> <strong class="thlist_name">[field:title/]<!--<em class="tuan_ico"></em>--></strong>
+      <div class="you_like_infor"> <span class="f-left">[[field:typename/]]</span>
+        <div class="price f-right">[field:qijia/]元/㎡</div>
+        <div class="clear"></div>
+      </div>
+      <p>[field:id function=GetTags(@me)/] </p>
+      <div class="discount">[field:zlhuxing/]</div>
+    </dd>
+  </dl>
+  </a> 
+{/dede:list}
+
+
+</div>
+<div id="AspNetPager1" class="pagination" align="left">
+  <div class="pagination" align="right" style="font-size:16px;"> </div>
+  <div align="left" class="pagination">
+    {dede:pagelist listitem="pre,next,index,end" listsize="5"/}
+  </div>
+</div>
+
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>
+<script type="text/javascript" src="/m/skin/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/list.js"></script>
+<script type="text/javascript" src="/m/skin/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/jquery.scrollloading.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.tb_navigation').on('click', function () {
+            $('.topnav').toggle();
+            $('.black').toggle();
+        })
+        $(".scrollLoading").scrollLoading();
+        $('div').not('.topnav').on('click', function () {
+            $('.topnav').hide();
+            $('.black').hide();
+        })
+    })
+
+    //设置URL参数的方法  
+    function setParmsValue(parms, parmsValue) {
+        //var urlstrings = document.URL;
+        var urlstrings = updateParms(parms, parmsValue);
+        var args = GetUrlParms();
+        var values = args[parms];
+        //如果参数不存在，则添加参数
+        if (values == undefined) {
+            //var query = location.search.substring(1); //获取查询串
+            var query = urlstrings.indexOf('?');
+            //如果Url中已经有参数，则附加参数
+            if (query != -1) {
+                if (urlstrings.indexOf('=') != -1) {
+                    urlstrings += ("&" + parms + "=" + encodeURIComponent(parmsValue));
+                } else {
+                    urlstrings += (parms + "=" + encodeURIComponent(parmsValue));
+                }
+            }
+            else {
+                urlstrings += ("?" + parms + "=" + encodeURIComponent(parmsValue));  //向Url中添加第一个参数  
+            }
+            window.location = urlstrings;
+        }
+        else {
+            window.location = updateParms(parms, parmsValue);  //修改参数  
+        }
+    }
+    //修改URL参数，parms：参数名，parmsValue：参数值，return：修改后的URL  
+    function updateParms(parms, parmsValue) {
+        var newUrlParms = "";
+        var newUrlBase = location.href.substring(0, location.href.indexOf("?") + 1); //截取查询字符串前面的url  
+        var query = location.search.substring(1); //获取查询串     
+        var pairs = query.split("&"); //在逗号处断开     
+        for (var i = 0; i < pairs.length; i++) {
+            var pos = pairs[i].indexOf('='); //查找name=value     
+            if (pos == -1) continue; //如果没有找到就跳过     
+            var argname = pairs[i].substring(0, pos); //提取name  
+            var value = pairs[i].substring(pos + 1); //提取value   
+            //如果找到了要修改的参数
+            if (!findText(argname, 'page') && !findText(argname, 'Sokey')) {
+                if (findText(argname, parms)) {
+                    newUrlParms = newUrlParms + (argname + "=" + encodeURIComponent(parmsValue) + "&");
+                }
+                else {
+                    newUrlParms += (argname + "=" + value + "&");
+                }
+            }
+        }
+        return newUrlBase + newUrlParms.substring(0, newUrlParms.length - 1);
+    }
+
+    //辅助方法  
+    function findText(urlString, keyWord) {
+        return urlString.toLowerCase().indexOf(keyWord.toLowerCase()) != -1 ? true : false;
+    }
+
+    //得到查询字符串参数集合  
+    function GetUrlParms() {
+        var args = new Object();
+        var query = location.search.substring(1); //获取查询串     
+        var pairs = query.split("&"); //在逗号处断开     
+        for (var i = 0; i < pairs.length; i++) {
+            var pos = pairs[i].indexOf('='); //查找name=value     
+            if (pos == -1) continue; //如果没有找到就跳过     
+            var argname = pairs[i].substring(0, pos); //提取name     
+            var value = pairs[i].substring(pos + 1); //提取value
+            args[argname] = unescape(value); //存为属性   
+        }
+        return args;
+    }
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    if (GetQueryString("soCity") != null && GetQueryString("soCity") !="") {
+        $('.city span:first').text($('.city').parent().find('li[tag=a' + GetQueryString("soCity") + ']').text());
+    } else {
+        $('.city span:first').text();
+    }
+    if (GetQueryString("soPrice") != null && GetQueryString("soPrice") != "") {
+        $('.qprice span:first').text($('.qprice').parent().find('li[tag=b' + GetQueryString("soPrice") + ']').text());
+    } else {
+        $('.qprice span:first').text();
+    }
+    if (GetQueryString("soHx") != null && GetQueryString("soHx") != "") {
+        $('.huxing span:first').text($('.huxing').parent().find('li[tag=c' + GetQueryString("soHx") + ']').text());
+    } else {
+        $('.huxing span:first').text();
+    }
+    if (GetQueryString("soTs") != null && GetQueryString("soTs") != "") {
+        $('.tese span:first').text($('.tese').parent().find('li[tag=d' + GetQueryString("soTs") + ']').text());
+    } else {
+        $('.tese span:first').text();
+    }
+</script>

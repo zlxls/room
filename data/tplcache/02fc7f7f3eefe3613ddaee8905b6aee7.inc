@@ -1,0 +1,1 @@
+<dt> <a href="[field:arcurl/]" target="_blank"><img title="[field:title/]" src="[field:litpic/]" style="border-width:0px;"> <span><b>[field:title/]</b></span> </a> </dt>

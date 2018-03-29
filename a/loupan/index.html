@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html ng-app="housesApp">
+    <head>
+        <meta charset="utf-8">
+        <title>楼盘_昭阳地产</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/skin/css/base.css" />
+        <link rel="stylesheet" href="/skin/css/common.css" />  
+        <link rel="stylesheet" href="/skin/css/houses.css">
+        <link rel="stylesheet" href="/skin/css/bootstrap.css">
+        
+            <link rel="stylesheet" href="/skin/css/header.css">
+    <link rel="stylesheet" href="/skin/css/backtop.css">
+    <link rel="stylesheet" href= "/skin/css/footer.css">
+</head>
+<body>
+
+
+<script src="/skin/js/jquery.min.js"></script>
+<script src="/skin/js/placeholder.js"></script>
+<script src="/skin/js/mask.js"></script>
+<script src="/skin/js/dialog.js"></script>
+<script src="/skin/js/alert.js"></script>
+
+
+	<!-- container: begin -->
+	<div id="container">
+		<!-- header: begin -->
+		<div id="header" name="header" class="cf">
+			<div class="headerBox">
+				<div class="fl">
+					<ul class="nav cf">
+						<li class="haowu_icon"><a href="/"><img src="/skin/images/haowu_across.png" alt=""></a></li>
+			
+						<li  ><a href="/">首页</a></li>
+						<li class='hover'><a href='/a/loupan/'>楼盘</a></li><li><a href="/a/news/" class="" target="_self">资讯</a></li><li><a href="/a/tuangou/" class="" target="_self">团购</a></li>
+					</ul>
+				</div>
+				<div class="login fr">
+					<div class="group filter-input has-feedback">
+                        <form name="formsearch" action="/plus/search.php">
+                            <input type="hidden" name="kwtype" value="0" />
+                            <input name="q" type="text" id="search-keyword" class="form-control filter-input  searchkey" value="" placeholder="请输入楼盘名/资讯等"/>
+
+                            <button type="submit" class="glyphicon glyphicon-search form-control-feedback pointer" style="background:none; border:none; color:#333"></button>
+                        </form>
+                    </div>
+				</div>
+                <div class="tel fr">TEL:13578068767</div>
+			</div>
+</div>
+		<!-- header: end -->
+
+		<!-- main: begin -->
+		<div id="main"> 
+        <div class="">
+            
+
+            <div class="container">
+                <div class="params-box">
+                    <div class="param-item">
+                        <label>海南区域：</label>
+                        
+            <a href="/a/loupan/haikou/">昭阳区</a>
+            
+            <a href="/a/loupan/sanya/">彝良</a>
+            
+            <a href="/a/loupan/qionghai/">大关</a>
+            
+            <a href="/a/loupan/chengmai/">盐津</a>
+            
+            <a href="/a/loupan/danzhou/">镇雄</a>
+            
+            <a href="/a/loupan/wenchang/">水富</a>
+            
+            <a href="/a/loupan/tunchang/">永善</a>
+            
+            <a href="/a/loupan/qiongzhong/">巧家</a>
+            
+            <a href="/a/loupan/dingan/">绥江</a>
+            
+            <a href="/a/loupan/lingao/">威信</a>
+            
+            <a href="/a/loupan/lingshui/">昭阳区南顺城</a>
+            
+            <a href="/a/loupan/wanning/">昭阳区省耕山水</a>
+            
+            <a href="/a/loupan/wjs/">昭阳区北部新洲</a>
+            
+                    </div>
+                    <div class="param-item"><label>价格区间：</label><a title="不限" class="" href="/plus/list.php?tid=1">不限</a><a title="3000元以下" href="/plus/list.php?tid=1&jiagequjian=3000%E5%85%83%E4%BB%A5%E4%B8%8B">3000元以下</a><a title="3000元-6000元" href="/plus/list.php?tid=1&jiagequjian=3000%E5%85%83-6000%E5%85%83">3000元-6000元</a><a title="6000元-8000元" href="/plus/list.php?tid=1&jiagequjian=6000%E5%85%83-8000%E5%85%83">6000元-8000元</a><a title="8000元以上" href="/plus/list.php?tid=1&jiagequjian=8000%E5%85%83%E4%BB%A5%E4%B8%8A">8000元以上</a></div><div class="param-item"><label>特色房产：</label><a title="不限" class="" href="/plus/list.php?tid=1">不限</a><a title="养老房" href="/plus/list.php?tid=1&loupanleixing=%E5%85%BB%E8%80%81%E6%88%BF">养老房</a><a title="海景房" href="/plus/list.php?tid=1&loupanleixing=%E6%B5%B7%E6%99%AF%E6%88%BF">海景房</a><a title="刚需房" href="/plus/list.php?tid=1&loupanleixing=%E5%88%9A%E9%9C%80%E6%88%BF">刚需房</a><a title="特色别墅" href="/plus/list.php?tid=1&loupanleixing=%E7%89%B9%E8%89%B2%E5%88%AB%E5%A2%85">特色别墅</a><a title="温泉入户" href="/plus/list.php?tid=1&loupanleixing=%E6%B8%A9%E6%B3%89%E5%85%A5%E6%88%B7">温泉入户</a><a title="打折优惠" href="/plus/list.php?tid=1&loupanleixing=%E6%89%93%E6%8A%98%E4%BC%98%E6%83%A0">打折优惠</a><a title="年度热盘" href="/plus/list.php?tid=1&loupanleixing=%E5%B9%B4%E5%BA%A6%E7%83%AD%E7%9B%98">年度热盘</a></div>
+                    
+                    <!-- 增加面积筛选字段 -->
+
+                    
+                </div>
+                <div class="top10">
+                        <div class="hot-box">
+                        <h4 class="">热门楼盘</h4>
+                        <!-- TOP10 -->
+                        <div class="hot-list">
+                           <div class="hot-item">
+                                <a href="/plus/view.php?aid=404" target="_blank">
+                                    <span class="order order-top1">1</span>
+                                    <span class="houseName" title="89年度热房均价4700">89年度热房均价4700 </span>
+                                    <span class="unit pull-right">4500元/㎡</span></a>
+                            </div>
+<div class="hot-item">
+                                <a href="/plus/view.php?aid=405" target="_blank">
+                                    <span class="order order-top2">2</span>
+                                    <span class="houseName" title="69平方米年度热房间">69平方米年度热房间 </span>
+                                    <span class="unit pull-right">5000元/㎡</span></a>
+                            </div>
+<div class="hot-item">
+                                <a href="/plus/view.php?aid=403" target="_blank">
+                                    <span class="order order-top3">3</span>
+                                    <span class="houseName" title="97热盘房">97热盘房 </span>
+                                    <span class="unit pull-right">5000元/㎡</span></a>
+                            </div>
+<div class="hot-item">
+                                <a href="/plus/view.php?aid=402" target="_blank">
+                                    <span class="order order-top4">4</span>
+                                    <span class="houseName" title="151平方米年度热房间">151平方米年度热房间 </span>
+                                    <span class="unit pull-right">5000元/㎡</span></a>
+                            </div>
+ 
+                      </div>
+                    </div>
+                                        <div class="poster">              
+                        <div class="img-list">
+                                                    </div>
+                        <div class="player">
+                                                    </div>
+                    </div>
+                        <div class="hot-box">
+                        <h4 class="">最新楼盘</h4>
+                        <!-- TOP10 -->
+                        <div class="hot-list">        
+                               <div class="hot-item">
+                                    <a href="/plus/view.php?aid=405" target="_blank">
+                                        <span class="order order-top1">1</span>
+                                        <span class="houseName" title="69平方米年度热房间">69平方米年度热房间 </span>
+                                        <span class="unit pull-right">5000元/㎡</span></a>
+                                </div>
+<div class="hot-item">
+                                    <a href="/plus/view.php?aid=402" target="_blank">
+                                        <span class="order order-top2">2</span>
+                                        <span class="houseName" title="151平方米年度热房间">151平方米年度热房间 </span>
+                                        <span class="unit pull-right">5000元/㎡</span></a>
+                                </div>
+<div class="hot-item">
+                                    <a href="/plus/view.php?aid=403" target="_blank">
+                                        <span class="order order-top3">3</span>
+                                        <span class="houseName" title="97热盘房">97热盘房 </span>
+                                        <span class="unit pull-right">5000元/㎡</span></a>
+                                </div>
+<div class="hot-item">
+                                    <a href="/plus/view.php?aid=404" target="_blank">
+                                        <span class="order order-top4">4</span>
+                                        <span class="houseName" title="89年度热房均价4700">89年度热房均价4700 </span>
+                                        <span class="unit pull-right">4500元/㎡</span></a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                                    </div>
+                <div class="main-list">
+                    <div class="sort">
+                        <ul id="tab" class="tab main-tab">
+                            <li class="active"><a onFocus="this.blur();">全部楼盘</a></li>
+                                                   </ul>
+                        <div class="param-sort cf">
+                            <span class="searchHouseNo fl">本网共合作<span class="color_orange">20</span>个楼盘</span>
+                            
+                        </div>
+                    </div>
+                    <div id="housesList" class="list-body">
+                                                    
+                                                
+                                                
+                             <div class="house-item">
+                                <div class="buy-type">
+                                    <img width="30" src="/skin/images/tuan.png" alt="团购楼盘"/>
+                                    <img width="30" src="/skin/images/du.png" alt="独家代理"/>
+                                </div>
+                                 <a href="/plus/view.php?aid=406" target="_blank">
+                                <img width="200" height="150" src="/uploads/allimg/180315/1-1P3151014200-L.jpg" alt="中玺金界四楼可直接买入">
+                                 </a>
+                                <h5>
+                                     <a href="/plus/view.php?aid=406" target="_blank">中玺金界四楼可直接买入</a>
+                                </h5>
+								<h5 class="product-list">
+                                    <span></span>
+                                </h5>
+								    <label class="marker">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                                                 
+                                    </label>
+                                <label class="unit-title pull-right">
+                                    <span>20000</span> 元/㎡
+                                    </label>
+                                <br/>
+                                    
+                            </div><div class="house-item">
+                                <div class="buy-type">
+                                    <img width="30" src="/skin/images/tuan.png" alt="团购楼盘"/>
+                                    <img width="30" src="/skin/images/du.png" alt="独家代理"/>
+                                </div>
+                                 <a href="/plus/view.php?aid=405" target="_blank">
+                                <img width="200" height="150" src="/uploads/allimg/180315/1-1P3151012490-L.jpg" alt="69平方米年度热房间">
+                                 </a>
+                                <h5>
+                                     <a href="/plus/view.php?aid=405" target="_blank">69平方米年度热房间</a>
+                                </h5>
+								<h5 class="product-list">
+                                    <span></span>
+                                </h5>
+								    <label class="marker">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                                                 
+                                    </label>
+                                <label class="unit-title pull-right">
+                                    <span>5000</span> 元/㎡
+                                    </label>
+                                <br/>
+                                    
+                            </div><div class="house-item">
+                                <div class="buy-type">
+                                    <img width="30" src="/skin/images/tuan.png" alt="团购楼盘"/>
+                                    <img width="30" src="/skin/images/du.png" alt="独家代理"/>
+                                </div>
+                                 <a href="/plus/view.php?aid=402" target="_blank">
+                                <img width="200" height="150" src="/uploads/180315/1-1P3150S534532.jpg" alt="151平方米年度热房间">
+                                 </a>
+                                <h5>
+                                     <a href="/plus/view.php?aid=402" target="_blank">151平方米年度热房间</a>
+                                </h5>
+								<h5 class="product-list">
+                                    <span></span>
+                                </h5>
+								    <label class="marker">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                                                 
+                                    </label>
+                                <label class="unit-title pull-right">
+                                    <span>5000</span> 元/㎡
+                                    </label>
+                                <br/>
+                                    
+                            </div><div class="house-item">
+                                <div class="buy-type">
+                                    <img width="30" src="/skin/images/tuan.png" alt="团购楼盘"/>
+                                    <img width="30" src="/skin/images/du.png" alt="独家代理"/>
+                                </div>
+                                 <a href="/plus/view.php?aid=403" target="_blank">
+                                <img width="200" height="150" src="/uploads/180315/1-1P3150S50L22.jpg" alt="97热盘房">
+                                 </a>
+                                <h5>
+                                     <a href="/plus/view.php?aid=403" target="_blank">97热盘房</a>
+                                </h5>
+								<h5 class="product-list">
+                                    <span></span>
+                                </h5>
+								    <label class="marker">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                                                 
+                                    </label>
+                                <label class="unit-title pull-right">
+                                    <span>5000</span> 元/㎡
+                                    </label>
+                                <br/>
+                                    
+                            </div><div class="house-item">
+                                <div class="buy-type">
+                                    <img width="30" src="/skin/images/tuan.png" alt="团购楼盘"/>
+                                    <img width="30" src="/skin/images/du.png" alt="独家代理"/>
+                                </div>
+                                 <a href="/plus/view.php?aid=404" target="_blank">
+                                <img width="200" height="150" src="/uploads/180315/1-1P3150S23KX.jpg" alt="89年度热房均价4700">
+                                 </a>
+                                <h5>
+                                     <a href="/plus/view.php?aid=404" target="_blank">89年度热房均价4700</a>
+                                </h5>
+								<h5 class="product-list">
+                                    <span></span>
+                                </h5>
+								    <label class="marker">
+                                    <span class="glyphicon glyphicon-map-marker"></span>
+                                                                 
+                                    </label>
+                                <label class="unit-title pull-right">
+                                    <span>4500</span> 元/㎡
+                                    </label>
+                                <br/>
+                                    
+                            </div>                      
+                                                
+                                                
+                                                
+                                                
+                                        </div>
+                    <div class="page-box">
+
+                        <div class="page">
+                         <li><span class="pageinfo">共 <strong>1</strong>页<strong>5</strong>条记录</span></li>
+
+                        </div>
+                     </div></div>                                
+                </div>
+            </div>
+                        <div class="container">
+                <div class="interest">
+                    <h4>你可能感兴趣的楼盘</h4>
+                    <div class="interest-list">
+                    
+                    <div class="interest-item">
+                            <a href="/plus/view.php?aid=404" target="_blank">
+                            <img src="/uploads/180315/1-1P3150S23KX.jpg" height="240" width="320" alt="89年度热房均价4700"/>
+                            <div class="interest-title">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                楼盘                                
+                                <div class="tab-list pull-right"></div>
+                            </div>
+                            <div  class="interest-info">
+                                <label>89年度热房均价4700</label>
+                                <div>
+                                    <label class="unit pull-right"><span>4500</span> 元/㎡
+                                    </label>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+<div class="interest-item">
+                            <a href="/plus/view.php?aid=402" target="_blank">
+                            <img src="/uploads/180315/1-1P3150S534532.jpg" height="240" width="320" alt="151平方米年度热房间"/>
+                            <div class="interest-title">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                楼盘                                
+                                <div class="tab-list pull-right"></div>
+                            </div>
+                            <div  class="interest-info">
+                                <label>151平方米年度热房间</label>
+                                <div>
+                                    <label class="unit pull-right"><span>5000</span> 元/㎡
+                                    </label>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+<div class="interest-item">
+                            <a href="/plus/view.php?aid=405" target="_blank">
+                            <img src="/uploads/allimg/180315/1-1P3151012490-L.jpg" height="240" width="320" alt="69平方米年度热房间"/>
+                            <div class="interest-title">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                楼盘                                
+                                <div class="tab-list pull-right"></div>
+                            </div>
+                            <div  class="interest-info">
+                                <label>69平方米年度热房间</label>
+                                <div>
+                                    <label class="unit pull-right"><span>5000</span> 元/㎡
+                                    </label>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                         
+                 </div>
+                </div>
+            </div>
+                    </div>
+        <!-- 返回顶部 -->
+        <!-- back to top : begin -->
+<div class="widget">
+	<a href="/m" class="phone">
+		<img src="/skin/images/phone.png" alt="">
+		<span>手机版</span>
+	</a>
+	<a href="#header" class="backTop">
+		<img src="/skin/images/backtop.png" alt="">
+	</a>
+</div>
+<!--  back to top : end -->        	</div>
+    	<!-- main: end -->
+    	<!-- footer: begin -->
+    	<div id="footer">
+    		<div class="footer_contain cf">
+                
+                <p>Copyright © 2017 - 2018. All Rights Reserved. 昭阳地产&nbsp;
+
+                </p>
+                <div class="flink">友情链接：<li><a href='http://www.dedecms.com' target='_blank'>织梦CMS官方</a> </li><li><a href='http://www.fangcms.cn' target='_blank'>易居房产系统</a> </li><li><a href='http://www.dede58.com' target='_blank'>织梦58</a> </li><li><a href='http://www.bieshu58.com' target='_blank'>三亚别墅</a> </li></div>
+                
+       
+            </div>
+</div>
+<script type="text/javascript" src="/skin/js/jquery-1.8.3.min.js"></script>
+<script src="/skin/js/backtop.js"></script>
+    	<!-- footer: end -->
+
+    </div>
+    <!-- container: end -->
+
+    <script src="/skin/js/jquery.min.js"></script>
+    <script src="/skin/js/placeholder.js"></script>
+    <script src="/skin/js/backtop.js"></script>        <script> var baseUrl = '/lists/'; </script>
+        <script src="/skin/js/jquery.min.js"></script>
+        <script src="/skin/js/houseslist.js"></script>
+    </body>
+
+</html>

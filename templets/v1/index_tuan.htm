@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/skin/css/base.css" />
+<link rel="stylesheet" href="/skin/css/common.css" />
+<link rel="stylesheet" href="/skin/css/houses.css">
+<link rel="stylesheet" href="/skin/css/tehui.css">
+<link rel="stylesheet" href="/skin/css/bootstrap.css">
+<link rel="stylesheet" href="/skin/css/header.css">
+<link rel="stylesheet" href="/skin/css/backtop.css">
+<link rel="stylesheet" href= "/skin/css/footer.css">
+</head>
+<body>
+<!-- container: begin -->
+<div id="container"> 
+  <!-- header: begin --> 
+  {dede:include filename="header.htm"/} 
+  <!-- header: end --> 
+  
+  <!-- main: begin -->
+  <div id="main" style="margin:73px auto 50px; ">
+    <div class="list">
+      <ul>
+      
+        {dede:arclist typeid='1' flag='f' row='18' titlelen='50' orderby='pubdate' addfields='tmaidian,tyouhui,junjia' channelid='2'}
+        <li>
+          <div class="imgdiv">
+            <div class="icons"> <i class="iconHaowu"></i> <i class="iconPrefer"></i> </div>
+            <a href="[field:arcurl/]" target="_blank"> <img src="[field:litpic/]" alt=""> </a> </div>
+          <div class="proptydetails">
+            <h1><a href="[field:arcurl/]" target="_blank">[field:title/]</a> </h1>
+            <div class="information">
+              <div class="detail">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th><i></i>楼盘位置 : [field:typename/]</th>
+                      <td>均价： [field:junjia/]元/平米 </td>
+                      <td class="openDate" title="">开盘日期：[field:pubdate function=MyDate('y-m-d',@me)/]</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <dl>
+                  <dt>海南易居团购优惠活动：</dt>
+                  <dd>[field:tmaidian/]</dd>
+                </dl>
+                <div class="tolearn"> <a target="_blank" href="[field:arcurl/]">了解详情<i></i></a> </div>
+              </div>
+              <div class="data">
+                <h2><strong> [field:click/] </strong>人推荐</h2>
+                
+                <input class="recommend login" type="submit" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=541475789&site=qq&menu=yes')" value="在线咨询">
+                
+             
+                <a class="tobuy login" data-reveal-id="myModal">我要看房</a>
+                
+              </div>
+            </div>
+            
+          </div>
+        </li>
+       {/dede:arclist}
+       
+        
+      </ul>
+      <!-- widget -->
+      <!-- widget --> 
+    </div>
+  </div>
+  
+  
+  <div id="myModal" class="reveal-modal">
+    <div class="modal-background">
+        <div class="photo-detail">
+        <div class="order-box default-color">
+            <h4><span class="close-order pointer close-reveal-modal"></span> 预约看房 </h4>
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                <input type="hidden" name="action" value="post">
+                <input type="hidden" name="diyid" value="1">
+                <input type="hidden" name="do" value="2">
+            <table class="table">
+            <colgroup width="140"></colgroup>
+            <tr>
+                                      <th>您的姓名：</th>
+                                      <td><input type="text" class="form-control" id="bm_fmname" name="bm_fmname" value=""/></td>
+            </tr>
+            <tr>
+                                      <th>联系方式：</th>
+                                      <td><input type="text" class="form-control" id="bm_fmtel" name="bm_fmtel" value=""/></td>
+            </tr>
+
+          </table>
+                  <div class="text-center">
+                  <input type="submit" class="btn" name="submit" value="提交">
+                  </div>
+                  <input type="hidden" name="mytime" id="mytime">
+                  <textarea name="bm_fmbeizhu" id="bm_fmbeizhu" cols="" rows="" class="itext" style=" display:none">该用户正用PC看《{dede:field.title/}》</textarea>
+                  <input type="hidden" name="dede_fields" value="bm_fmname,text;bm_fmtel,text;bm_fmbeizhu,multitext;mytime,text;dytime,text">
+                  <input type="hidden" name="dede_fieldshash" value="85e2a498b370e32e6234a487cca8f75c">
+          </form>                
+          </div>
+      </div>
+      </div>
+     </div>
+  
+  <!-- 返回顶部 --> 
+  <!-- back to top : begin -->
+  <div class="widget"> <a href="/m" class="phone"> <img src="/skin/images/phone.png" alt=""> <span>手机版</span> </a> <a href="#header" class="backTop"> <img src="/skin/images/backtop.png" alt=""> </a> </div>
+  <!--  back to top : end --> </div>
+<!-- main: end --> 
+<!-- footer: begin --> 
+{dede:include filename="footer.htm"/} 
+<!-- footer: end -->
+
+</div>
+<!-- container: end --> 
+
+<script type="text/javascript" src="/skin/js/jquery-1.8.3.min.js"></script> 
+<link rel="stylesheet" href="/skin/css/reveal.css">	
+<script type="text/javascript" src="/skin/js/jquery.reveal.js"></script>
+
+</body>
+</html>

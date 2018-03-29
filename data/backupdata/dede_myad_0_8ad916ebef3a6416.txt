@@ -1,0 +1,5 @@
+INSERT INTO `dede_myad` VALUES('25','0','0','index_5','【首页】海南别墅专题','0','1453637429','1456229429','<a href=\"#\" id=\"qyuef\"><img src=\"/uploads/160124/1-160124201050639.jpg\"  border=\"0\" /></a>','');
+INSERT INTO `dede_myad` VALUES('23','0','0','index_3','【首页】西线价值洼地','0','1453637236','1456229236','<a href=\"#\" id=\"qyuef\"><img src=\"/uploads/160124/1-160124200Pa92.jpg\"  border=\"0\" /></a>','');
+INSERT INTO `dede_myad` VALUES('24','0','0','index_4','【首页】当包租婆','0','1453637387','1456229387','<a href=\"#\" id=\"qyuef\"><img src=\"/uploads/160124/1-160124201012329.jpg\"  border=\"0\" /></a>','');
+INSERT INTO `dede_myad` VALUES('22','0','0','index_2','【首页】置业儋州无压力','0','1453637150','1456229150','<a href=\"#\" id=\"qyuef\"><img src=\"/uploads/160124/1-160124200630515.jpg\"  border=\"0\" /></a>','');
+INSERT INTO `dede_myad` VALUES('21','0','0','index_1','【首页】海南购房好帮手','0','1453637028','1456229028','<a href=\"#\" id=\"qyuef\"><img src=\"/uploads/160124/1-16012420043I59.jpg\"  border=\"0\" /></a>','');

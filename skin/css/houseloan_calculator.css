@@ -1,0 +1,231 @@
+﻿html, body, div, span, label, table, tbody, tfoot, thead, tr, th, td { border:0;margin:0;outline:0;
+    padding:0;color:#333;font-size:13px;font-family:Tahoma,Verdana,'Lucida Sans Unicode'; }
+i { font-style:normal; }
+a { color:black;text-decoration:none; }
+li, a { overflow:hidden; }
+.clear { clear:both; }
+.line { padding:5px 0 5px; }
+.line span { display:inline-block;width:102px;padding-top:2px;line-height:26px;text-align:left;font-size:14px;color:#666; }
+.line label { line-height:18px; }
+input, button, select, textarea { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; }
+.input_box { display:inline-block;padding:2px 4px;margin-right:7px;font-size:12px;color:#555;vertical-align:middle;
+    background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:1px; }
+.input_box:focus { border-color:#66afe9;outline:0; }
+.input_box[disabled], .input_box[readonly] { background-color:#F6F6F6;cursor:default; }
+
+.calculator_canvas { display:inline-block;width:100%;background:#F5F5F5; }
+.calculator { width:540px;padding:4px 0 5px 0;margin:0 auto; }
+.main {min-height:319px;margin:0 auto;border:0;background:#fff;
+    /*-moz-box-shadow:#d0d0d0 0 0 3px;-webkit-box-shadow:#d0d0d0 0 0 3px;box-shadow:#d7d7d7 0 0 3px;*/
+}
+.calc_header {height:50px;padding: 0 1px; background:#f1f1f1; }
+.calc_header .tab {float: left; display:inline;width:150px;height:50px; margin-left: -1px;
+    line-height:48px;border:1px solid #e1e1e1;text-align:center;font-size:18px;letter-spacing:0.6px;color:#333;
+    background:#E6E6E6;cursor:pointer;-ms-user-select:none;-webkit-user-select:none;-moz-user-select:none;user-select:none; }
+.calc_header .tab.select_tab {height:50px; color:#c00;font-weight:700;background:#fff;border-top:4px solid #c00;
+    border-bottom:0;cursor:default; }
+.calc_header .tab.normal_tab:hover { background:#e9e9e9; }
+.calc_header .tab i { display:none; }
+.calc_header .tab.select_tab i { display:inline-block; }
+.calc_header .calc_name { display:inline-block;position:absolute;width:130px;height:28px;line-height:28px;margin-top:7px;
+    margin-left:28px;*margin-left:15px;_margin-left:28px;font-family:SimSun;font-size:16px;font-weight:700;color:#d6d6d6; }
+.calc_body1 {padding:5px 3px;padding-bottom:5px;-moz-box-shadow:#d0d0d0 0 0 3px;-webkit-box-shadow:#d0d0d0 0 0 3px;box-shadow:#d7d7d7 0 0 3px; }
+.calc_body { min-height:100px;padding:5px 3px;padding-bottom:5px;overflow:auto; }
+.input_form { float:left;width:97%;padding-top:12px;padding-left:16px;padding-bottom:6px;background:#FFF; }
+.input_form .line label.repay_method { margin-left:2px;*margin-left:0; }
+.input_form .line label i {line-height: 22px;  display: inline-block;  font-size: 15px; vertical-align: middle; _font-size: 14px; font-weight: lighter; }
+.input_form .line i.warning_text { display:none;padding-left:5px;margin-left:2px;line-height:18px;_font-size:14px;color:#FF2929; }
+.input_form .line label input#repay_radio1 { margin-left:0; }
+.input_form .line label input.repay_radio { margin-right:4px;*margin-right:0; }
+.input_form .line img.repay_help_tag { display:inline-block;margin-left:-1px;*margin-left:-3px;
+    margin-right:8px;*margin-right:7px;_margin-right:8px;z-index:1000;cursor:pointer; }
+.input_form .line a.link_1 { *display:inline-block;line-height:15px;*line-height:14px;font-size:13px;
+    *font-size:12px;color:#6699FF;text-decoration:underline; }
+.input_form .line a.link_1:hover { color:#FF6666;text-decoration:underline; }
+.input_form input.input_box { height:26px;line-height:26px; border-radius: 2px;font-size: 14px; }
+.input_form input.input_box.money_input { width:85px; }
+.input_form input.input_box.rate_input { width:38px;margin-right:3px; }
+.input_form input.input_box.normal_border { border-color:#ccc; }
+.input_form input.input_box.focus_border { border-color:#66afe9; }
+.input_form input.input_box.warning_border { border-color:#FF2929; }
+.input_form select.input_box { height:26px;line-height:26px;margin-left:0;margin-right:4px;
+    padding-left:2px;padding-right:4px;font-size:14px;border-radius: 2px; }
+.input_form select.input_box.long_select { width:130px; }
+.input_form select.input_box.short_select { width:77px; }
+.input_form select.input_box#business_discount { margin-right:0; }
+.input_form .long_select_wrapper{ display:inline-block;border:solid 1px #ccc; padding:4px 1px;margin-right:5px;vertical-align:middle; }  
+.input_form .long_select_shelter{ display:inline-block;width:128px;*width:126px;height:18px;overflow:hidden; }  
+.input_form .long_select_shelter select.input_box.long_select{*margin:-2px;padding:0;border:0;width:130px;height:22px; }
+.input_form .short_select_wrapper{ display:inline-block;border:solid 1px #ccc; padding:4px 1px;margin-right:0px;vertical-align:middle; } 
+.input_form .short_select_shelter{ display:inline-block;width:64px;*width:62px;height:18px;overflow:hidden; }  
+.input_form .short_select_shelter select.input_box.short_select{*margin:-2px;padding:0;border:0;width:66px;height:22px; }
+.input_form .btn_group {height: 80px; padding-left:90px;*padding-left:93px;padding-top:10px;background:#fff; }
+.input_form .btn_group .btn {display:inline;width:120px;height:38px;line-height:30px;text-align:center;vertical-align:middle;
+    padding:4px 12px;margin-right:15px;margin-bottom:0;font-size:18px;letter-spacing:1.4px;cursor:pointer;border-radius:0;box-shadow:none; }
+.input_form .btn_group .calc_btn { color:#FFF;background:#c00;border:none; }
+.input_form .btn_group .calc_btn:hover { background:#c00; }
+.input_form .btn_group .reset_btn { color:#fff;background:#4eb6cf;border:none; }
+.input_form .btn_group .reset_btn:hover { background:#4eb6cf; }
+.result { float:left;  width: 98%; display:none;margin-top:10px;margin-bottom:0; }
+.result .result_tab_wrapper { margin:0 10px 0 10px padding-top:10px; background:#FFF; }
+.result .result_tab { width:100%;height:70px; padding-left: 25px; background:#fff;
+    border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;}
+.result .result_tab .tab {display: inline-block; float: left; width: 188px; height: 68px; border-right: 1px solid #e1e1e1;
+    padding-top: 10px; text-align: center; margin-left: 0; margin-right: 0; background: #f1f1f1; position:relative; }
+.result .result_tab .tab.select_tab { color:#FFF;background:#c00;cursor:default; }
+
+.result .result_tab .tab.normal_tab:hover { background:#f0f3f3; }
+.result .result_tab .tab p.result_tab_main_title {line-height: 32px; font-size: 18px;
+    font-family: 'Microsoft YaHei'; font-weight: 500; margin: 0; }
+.result .result_tab .tab p.result_tab_sub_title { color:#828E98;font-size:12px;font-weight:700;margin:0; }
+.result .result_tab .tab i.repay_method { color:#2C3E50; }
+.result .result_tab .tab.select_tab i.repay_method { color:#FFF; }
+.result .result_tab .tab i.repay_assessment { color:#FF6666; }
+.result .result_tab .tab.select_tab i.repay_assessment { color:#FFF; }
+.result .result_tab .tab i.fund { margin-left:3px; }
+.result .result_tab .tab i.prompt { color:#aaa; }
+.result .result_tab .tab.select_tab i.prompt { color:#FFF; }
+.result .result_tab .tab.select_tab i,
+.result .result_tab .tab.select_tab p { color:#FFF; }
+.result .result_data { padding:25px 14px 25px;background:#FFF;overflow:hidden; }
+.result .result_data .line { padding:5px 4px 5px 10px;margin:0; }
+.result .result_data .line span { display:inline-block;width:92px;min-width:0;text-align:right;
+    margin-right:0; vertical-align: middle; font-weight: lighter; }
+.result .result_data .line label { margin-right:15px; }
+.result .result_data .line label i{ _font-size:12px; }
+.result .result_data .line label.result_line_right_item span { width:120px; }
+.result .result_data .line label.result_line_left_item span { width:60px;text-align:left; }
+.result .result_data .line input { width: 98px;    height: 26px;    line-height: 26px;    margin: 0 7px;}
+.result .result_data .title_table { display:inline-block;width:470px;height:32px;text-align:left;margin-left:9px;
+    margin-top:14px;margin-bottom:0;border-bottom:2px solid #DDD; }
+.result .result_data .title_table tr { display:table;width:462px;height:30px;padding-left:0; }
+.result .result_data .title_table td { color:#AAA;_font-size:14px; }
+.result .result_data .data_container { width:470px;height:320px;margin-left:9px;margin-top:0;margin-bottom:4px;overflow-y:auto;overflow-x:hidden; }
+.result .result_data .data_table { display:inline-block;width:470px;height:320px;text-align:left;border-spacing:0;border-collapse:collapse; }
+.result .result_data .data_table tr { display:table;width:470px; }
+.result .result_data .data_table tr.high_tr { height:32px; }
+.result .result_data .data_table tr.low_tr { height:31px; }
+.result .result_data .data_table tr.even_tr { background:#F9F9F9; }
+.result .result_data .data_table tr.even_tr td { color:#299BD1; }
+.result .result_data .data_table tr.odd_tr td { color:#E285AB; }
+.result .result_data .data_table td { width:105px;border-bottom:1px solid #DDD; }
+.result .result_data .data_table td.first_td { width:42px;padding-left:8px; }
+.result .result_data .data_table td.last_td { width:103px;padding-left:2px; }
+.result .result_relate { float:left;width:470px;height:28px;line-height:28px;margin-top:7px;margin-left:9px;
+    _margin-left:5px;margin-bottom:0;text-align:right;cursor:pointer; }
+.result .result_relate i.prompt { float:left;display:inline;margin-left:2px;color:#999;_font-size:12px; }
+.result .result_relate .link_2 { float:left;display:inline;margin-left:2px;color:#299BD1;_font-size:12px; }
+.result .result_relate .link_2:hover { color:#F7941D;text-decoration:underline; }
+.result .result_relate .link_3 { display:inline;margin-right:5px;_margin-right:10px;color:#E285AB;_font-size:12px; }
+.result .result_relate .link_3:hover { color:#FF3333;text-decoration:underline; }
+.result .user_input { width:470px;height:155px;margin-left:5px;margin-top:0;margin-bottom:5px;border-bottom:1px dashed #E1E1E1; }
+.result .user_input .line span { width:130px;text-align:left; }
+.result .user_input .line label.start_repay_date { margin-left:0;*margin-left:3px;_margin-left:0; }
+.result .user_input .line label i { line-height:15px;font-size:13px;_font-size:14px; }
+.result .user_input .line i.warning_text { display:none;padding-left:5px;margin-left:2px;line-height:18px;_font-size:14px;color:#FF2929; }
+.result .user_input .line label input.repaydate_uncertainty { width:13px;height:13px;margin-right:4px; }
+.result .user_input input.input_box { height:22px;line-height:22px;margin:0;margin-right:7px; }
+.result .user_input input.input_box.money_input { width:90px; }
+.result .user_input input.input_box.normal_border { border-color:#ccc; }
+.result .user_input input.input_box.focus_border { border-color:#66afe9; }
+.result .user_input input.input_box.warning_border { border-color:#FF2929; }
+.result .user_input select.input_box { height:28px;line-height:22px;margin-left:0;margin-right:4px;padding-left:2px;padding-right:4px;font-size:12px; }
+.result .user_input select.input_box.long_select { width:76px; }
+.result .user_input select.input_box.short_select { width:62px; }
+.result .user_input .long_select_wrapper{ display:inline-block;border:solid 1px #ccc; padding:4px 1px;margin-right:5px;vertical-align:middle; }  
+.result .user_input .long_select_shelter{ display:inline-block;width:74px;*width:72px;height:18px;overflow:hidden; }  
+.result .user_input .long_select_shelter select.input_box.long_select{*margin:-2px;padding:0;border:0;width:76px;height:22px; }
+.result .user_input .short_select_wrapper{ display:inline-block;border:solid 1px #ccc; padding:4px 1px;margin-right:0;vertical-align:middle; }
+.result .user_input .short_select_shelter{ display:inline-block;width:60px;*width:58px;height:18px;overflow:hidden; }  
+.result .user_input .short_select_shelter select.input_box.short_select{*margin:-2px;padding:0;border:0;width:62px;height:22px; }
+.result .user_input .btn_group { height:36px;padding-left:143px;*padding-left:146px;padding-top:10px;background:#fff; }
+.result .user_input .btn_group .btn { float:left;display:inline;width:110px;height:30px;line-height:20px;text-align:center;
+    vertical-align:middle;padding:4px 12px;margin-right:15px;margin-bottom:0;font-size:14px;letter-spacing:1.4px;cursor:pointer;border-radius:1px;box-shadow:none; }
+.result .user_input .btn_group .eval_btn { color:#FFF;background:#57B300;border:1px solid #499600; }
+.result .user_input .btn_group .eval_btn:hover { background:#68bf15; }
+.result .summary { width:470px;height:254px;*height:260px;_height:254px;margin-left:5px;margin-top:0;margin-bottom:5px;border-bottom:1px dashed #E1E1E1; }
+.result .summary .line span { text-align:left;font-size:14px;color:#299BD1; }
+.result .summary p { font-size:13px;_font-size:12px;color:#777; }
+.result .summary p.sorry { color:#E285AB; }
+.result .summary p.warning { color:#E285AB; }
+.result .advice { width:470px;height:109px;*height:103px;_height:109px;margin-left:5px;margin-top:0;margin-bottom:4px;border-bottom:1px dashed #E1E1E1; }
+.result .advice .line span { text-align:left;font-size:14px;color:#E285AB; }
+.result .advice p { font-size:13px;_font-size:12px;color:#777; }
+
+.repay_help_wnd { display:none;position:absolute;width:214px;line-height:20px;padding:7px;border:1px solid #CCCCCC;
+    box-shadow:0 1px 5px #DDDDDD;background:none repeat scroll 0 0 #FFFFFF;z-index:10000; }
+.repay_help_wnd .repay_help_wnd_arrow { position:absolute;top:-7px; }
+.repay_help_wnd .repay_help_wnd_close { float:right;cursor:pointer; }
+.repay_help_wnd .repay_help_wnd_content { padding:10px 0 5px 0;*font-size:12px;_font-size:12px; }
+.repay_help_wnd a { color:#0066CC;text-decoration:underline; }
+.repay_help_wnd a:hover { color:#FF6666;text-decoration:underline; }
+
+.calc_footer { width:520px;margin-top:5px;*margin-top:0;overflow:auto; }
+.relate { width:500px;height:45px;line-height:45px;padding-left:20px;border-top:#dbdbdb solid 1px;background:#f1f1f1;overflow:hidden; }
+.relate div, .relate a { float:left;display:block;font-size:12px;padding-top:2px; }
+.relate .title { margin-right:10px;color:#E285AB; }
+.relate a { margin-right:10px;color:#999;text-decoration:none; }
+.relate a:hover { color:#F7941D;text-decoration:underline; }
+
+.atc_recmd_module { float:left;width:115px;margin-top:17px;margin-bottom:5px; }
+.atc_recmd_module .mod_tit { position:relative;height:32px;line-height:32px;padding-left:16px;margin:0;font-size:12px;background-color:#555; }
+.atc_recmd_module .mod_tit em { font-size:12px; color:#fff; font-style:normal; }
+.atc_recmd_module .act_list { padding-top:3px;padding-bottom:3px;border:1px solid #CCCCCC;border-top:0; }
+.atc_recmd_module .act_box { margin-left:6px;padding-top:4px;_padding-top:3px;padding-bottom:4px;_padding-bottom:3px; }
+.atc_recmd_module .act_box a { display:inline-block;height:14px;line-height:14px;padding-left:10px;margin:0;
+    font-size:12px;color:#65778A;text-decoration:none;
+    background:url("../images/link_dot.png") no-repeat; }
+.atc_recmd_module .act_box a.important { color:#E285AB; }
+.atc_recmd_module .act_box a:hover { color:#CC0033;text-decoration:underline; }
+
+
+/* 追加样式 */
+.t20 {  top: 25px;}
+.w550 {  width: 550px;}
+.btnClose{
+    /*position: absolute;*/
+    /*margin: -5px 1035px;*/
+    /*cursor: pointer;*/
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    margin-left: 492px;
+    margin-top: -9px;
+
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    border: 0;
+    -webkit-appearance: none;
+    /*background: url("../images/walletspirit.png") no-repeat -120px -108px;*/
+    /*background: url("../images/close.png") no-repeat -120px -108px;*/
+    background: url("../images/walletspirit.png") no-repeat -120px -108px;
+}
+.btnClose img {display: none}
+.result_tab_sub_title {color: #ffffff;}
+.result_tab_sub_title .unit {  font-size: 12px;}
+.result_tab_sub_title .interest { clear: both; border: 0; box-shadow: 0 0 0; margin-top: 0; background: none;}
+.result_data input.input_box { height: 26px; line-height: 26px; border-radius: 2px; font-size: 14px; display:
+    inline-block; padding: 2px 4px; margin-right: 7px; color: #555; vertical-align: middle;
+    background-color: #fff; background-image: none; border: 1px solid #ccc; }
+.result .result_tab .tab.select_tab:after { display: block; content: ""; width: 0; height: 0;
+    border: 10px solid transparent; border-top-color: #c00; position: absolute; left: 86px; bottom: -20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

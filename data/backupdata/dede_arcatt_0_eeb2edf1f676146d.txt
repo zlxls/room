@@ -1,0 +1,5 @@
+INSERT INTO `dede_arcatt` VALUES('1','h','头条');
+INSERT INTO `dede_arcatt` VALUES('5','f','团购');
+INSERT INTO `dede_arcatt` VALUES('2','c','推荐');
+INSERT INTO `dede_arcatt` VALUES('3','p','图片');
+INSERT INTO `dede_arcatt` VALUES('4','j','跳转');

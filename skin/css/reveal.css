@@ -1,0 +1,147 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.5);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 520px;
+		position: absolute;
+		z-index: 101;
+		height:310px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+
+		}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+
+		cursor: pointer;
+		} 
+
+
+
+
+
+.order-box {
+    width:510px;
+    margin: auto;
+    background:#ffffff;
+    color:#999999 !important;
+    /*height: 485px;*/
+    
+}
+.order-box h4 {
+    padding:20px;
+    color:#000000;
+    font-weight: bold;
+    background: #f1f1f1;
+    border-bottom: 1px solid #e1e1e1;
+}
+#orderModal table tr > * {
+    border:0 !important;
+    font-size: 1.1em;
+}
+#orderModal th {
+    text-align: right;
+    vertical-align: middle;
+}
+#orderModal input,#orderModal select {
+    width: 305px;
+    height: 48px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+#orderModal select {
+    width:140px;
+}
+#orderModal .date-icon {
+    position: absolute;
+    margin-left: 263px;
+    margin-top: 10px;
+    pointer-events: none;
+    display: inline;
+}
+.order-box .btn {
+    width:300px;
+    padding:10px 0px;
+    margin-bottom: 60px;
+    margin-top: 10px;
+    background: #c00;
+    border: 0;
+    font-size: 1.2em;
+    color:#ffffff;
+    border-radius: 3px;
+    outline: none;
+}
+#successModal h4 {
+    background: none;
+    border:0;
+}
+#successModal .success {
+    padding-top:5px;
+}
+#successModal h4 {
+    color: #999999;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#successModal p {
+    color: #999999;
+}
+#successModal p label {
+    color: #000000;
+}
+#successModal button {
+    margin-top:23px;
+}
+.amap-copyright {
+    display: none;
+}
+
+
+.close-detail, .close-order {
+    /*position: absolute;*/
+    /*margin: -5px 1035px;*/
+    /*cursor: pointer;*/
+    position: absolute;
+    margin: 11px 1036px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    border: 0;
+    -webkit-appearance: none;
+    background: url("../images/walletspirit.png") no-repeat -120px -108px;
+}
+.close-order {
+    margin: 0 446px;
+}
+.close-detail img, .close-order img {
+    display: none
+}
+
+.modal-background table{ width:80%; margin:0px auto;}
+.modal-background .table > tbody > tr > th,.modal-background .table > tbody > tr > td{ border:none !important}

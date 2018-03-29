@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head id="tHead">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<link href="skin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="skin/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="skin/css/swiper.min.css" rel="stylesheet" type="text/css" />
+<script src="/m/skin/js/touchslide.js"></script>
+<style type="text/css">
+body {
+	background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+<!--header-->
+<header> <a href="javascript:window.history.back();" class="tb_back Hui-iconfont" title="返回">&#xe6d4;</a>
+  <h1 class="header_title">{dede:field.title/}</h1>
+  <a class="tb_navigation Hui-iconfont" href="javascript:void(0);">&#xe681;</a>
+  <div class="topnav pointer_li">
+    <ul>
+      <li><a href="/m">首页</a></li>
+      {dede:channel type='top' row='10'}
+      <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="black"></div>
+</header>
+<!--header end-->
+
+<div class="mh-img-total">
+  <div id="focus" class="focus">
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+    <div class="bd">
+      <ul>
+        {dede:field name='imgurls'}
+        <li><a href="[field:imgsrc/]"><img src="[field:ddimg/]" alt="[field:alttext /]" /></a></li>
+        {/dede:field}  
+        {dede:field name='imgurls2'}
+        <li><a href="[field:imgsrc/]"><img src="[field:ddimg/]" alt="[field:alttext /]" /></a></li>
+        {/dede:field}
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#focus",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"left", 
+					autoPlay:true,//自动播放
+					autoPage:true, //自动分页
+					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+				});
+			</script> 
+</div>
+<div class="detail-header">
+  <div class="clearfix">
+    <h2>{dede:field.title/}</h2>
+    <span class="pre-inf">正在销售</span> </div>
+  <ul>
+    <li> {dede:tag sort='new' getall='0' row='30'} <span class="tag">[field:tag /]</span> {/dede:tag} </li>
+  </ul>
+</div>
+<div class="price-wrap">
+  <label>起价</label>
+  <em>{dede:field.qijia/}元/m<sup>2</sup></em>
+  <label>均价</label>
+  <span>{dede:field.junjia/}元/m<sup>2</sup></span> </div>
+<ul class="loupan-info clearfix">
+  <li class="half"> <span class="label">开盘时间</span> <em><span id="mhkptime">{dede:field.kaipantime function="MyDate('Y-m-d',@me)"/}</span></em> </li>
+  <li class="half"> <span class="label">入住时间</span> <em><span id="rztime">{dede:field.jiaofangtime function="MyDate('Y-m-d',@me)"/}</span></em> </li>
+  <li class="all"> <span class="label">所属区域</span> [{dede:field.typename/}] </li>
+  <li class="all"> <span class="label">住宅类型</span> {dede:field.loupanleixing/} </li>
+  <li class="all"> <span class="label">房屋类型</span> {dede:field.zlhuxing/} </li>
+  <li class="all"> <span class="label">住宅类型</span> {dede:field.loupanleixing/} </li>
+  <li class="all"> <span class="label">房屋类型</span> {dede:field.zlhuxing/} </li>
+  <li class="all"> <span class="label">公交路线</span> {dede:field.gongjiaolx/} </li>
+  <li class="all"> <span class="label">物业公司</span> {dede:field.wuyegs/} </li>
+  <li class="all"> <span class="label">物&nbsp;&nbsp;业&nbsp;&nbsp;费</span> {dede:field.wuyef/} </li>
+  <li class="all"> <span class="label">规划面积</span> {dede:field.guihuaarea/}平米</li>
+  <li class="all"> <span class="label">建筑面积</span> {dede:field.jianzhuarea/}平米 </li>
+  <li class="all"> <span class="label">所在地址</span> {dede:field.lopandizhi/} </li>
+</ul>
+<h2 class="title-h2">项目介绍</h2>
+<ul class="loupan-info clearfix">
+  <div id="pageInfo" class="pageInfo" style="line-height:26px;"> {dede:field.body/} </div>
+</ul>
+<h2 class="title-h2">楼盘配套</h2>
+<ul class="loupan-info clearfix">
+  <div id="pageInfo" class="pageInfo" style="line-height:26px;">
+    <dl>
+      <dd><ins class="icon-4"></ins>学校</dd>
+      <dt>{dede:field.zbshool/}</dt>
+    </dl>
+    <dl>
+      <dd><ins class="icon-46"></ins>购物</dd>
+      <dt>{dede:field.zbgouwu/}</dt>
+    </dl>
+    <dl>
+      <dd><ins class="icon-38"></ins>医院</dd>
+      <dt>{dede:field.zbyiyuan/}</dt>
+    </dl>
+    <dl>
+      <dd><ins class="icon-47"></ins>生活</dd>
+      <dt>{dede:field.zbshenghua/}</dt>
+    </dl>
+    <dl>
+      <dd><ins class="icon-49"></ins>娱乐</dd>
+      <dt>{dede:field.zbyule/}</dt>
+    </dl>
+    <dl>
+      <dd><ins class="icon-48"></ins>餐饮</dd>
+      <dt>{dede:field.zbcanyin/}</dt>
+    </dl>
+  </div>
+</ul>
+<div class="m-wap400box">
+  <div class="m-wap400"> <a href="tel:4001556999" class="f-fl"> <i class="Hui-iconfont">&#xe6a3</i> 咨询电话 : {dede:field.slctel/} </a>
+    <div class="clear"></div>
+  </div>
+</div>
+<style>
+.pageInfo dd{ font-weight:bold}
+</style>
+<script type="text/javascript" src="/m/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/m/skin/js/list.js"></script> 
+<script type="text/javascript" src="/m/skin/js/swiper.jquery.min.js"></script> 
+<script type="text/javascript" src="/m/skin/js/jquery.scrollloading.js"></script> 
+<script type="text/javascript">
+    $(function () {
+        $('.tb_navigation').on('click', function () {
+            $('.topnav').toggle();
+            $('.black').toggle();
+        })
+        $(".scrollLoading").scrollLoading();
+        $('div').not('.topnav').on('click', function () {
+            $('.topnav').hide();
+            $('.black').hide();
+        })
+    })
+	</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+127.0.0.1||/index.php?upcache=1||SELECT arc.*,tp.typedir,tp.typename,tp.corank,tp.isdefault,tp.defaultname,tp.namerule,
+        tp.namerule2,tp.ispart,tp.moresite,tp.siteurl,tp.sitepath
+        ,addf.qijia,addf.junjia"
+        FROM `dede_archives` arc LEFT JOIN `dede_arctype` tp on arc.typeid=tp.id
+         LEFT JOIN `dede_addonimages` addf ON addf.aid = arc.id 
+         WHERE  arc.channel = '2'  And  arc.arcrank > -1    ORDER BY arc.sortrank desc  LIMIT 0,4 ||unusual character

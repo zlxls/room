@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>永庆湾_我的网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/v1/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/v1/style/picture.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="mobile-agent" content="format=xhtml;url=/m/view.php?aid=22">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/view.php?aid=22";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	var taget_obj = document.getElementById('_ajax_feedback');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/member/ajax_feedback.php");
+	DedeXHTTP = null;
+}
+function checkSubmit(){
+	if(document.feedback.msg.value!='') document.feedback.submit();
+	else alert("评论内容不能为空！");
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+
+
+  var shortname = ".html";
+  var npage = 1;
+	var totalpage = 3;
+	var namehand = '22';
+	var displaytype = 'st';
+	var gtimer = null;
+	//大图
+	function dPlayBig()
+	{
+		var imgObj = document.getElementById("bigimg");
+		window.open(imgObj.src);
+	}
+	//停止幻灯
+	function dStopPlay()
+	{
+		if(gtimer) clearTimeout(gtimer);
+		else dPlayNext();
+	}
+	//开始幻灯
+	function dStartPlay()
+	{
+		if(npage!=totalpage) {
+			gtimer = setTimeout("dPlayNext()",10000);
+		}
+	}
+
+	//上一张
+	function dPlayPre(){
+
+	if(npage<2)
+	{
+			alert("这是第一页");
+	}
+	else
+	{
+			if(npage==2) {
+				if(namehand!='') location.href = namehand+shortname;
+				else location.href = "view.php?aid=22";
+			} else if(displaytype=='st' && namehand!='') {
+				location.href = namehand+"_"+(npage-1)+shortname;
+			} else {
+				location.href = "view.php?aid=22&pageno="+(npage-1);
+			}
+		}
+	}
+
+	//下一张
+	function dPlayNext()
+	{
+		if(npage==totalpage) { alert("没有了哦"); }
+		else
+		{
+			if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+shortname;
+			else location.href = "view.php?aid=22&pageno="+(npage+1);
+		}
+	}
+-->
+</script>
+</head>
+<body class="picboxview">
+
+无法在这个位置找到： head2.htm
+<!-- /header -->
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> <a href='http://www.hnyiju.com/'>主页</a><a href='/a/loupan/'>楼盘</a>
+		</div><!-- /place -->
+		<div class="viewbox">
+			<div class="title">
+				<h2>永庆湾</h2>
+			</div><!-- /title -->
+			<div class="info">
+				<small>时间:</small>2015-12-19 20:59<small>来源:</small>未知 <small>作者:</small>admin <small>点击:</small><script src="/plus/count.php?view=yes&aid=22&mid=1" type='text/javascript' language="javascript"></script>次
+			</div><!-- /info -->
+			<div class="picbox">
+
+             
+					<center>
+						<a href='javascript:dPlayBig();' class='c1'>原始图片</a>
+
+						<a href='javascript:dPlayPre();' class='c1'>上一张</a>
+
+						<a href='javascript:dPlayNext();' class='c1'>下一张</a>
+
+						<a href='javascript:dStopPlay();' class='c1'>自动 / 暂停播放</a>
+
+					</center>
+                	
+             <!-- 如果使用的是多页单图模式(幻灯)，把href里的链接改为 javascript:dPlayNext(); 表示点击看下一页 -->
+             
+                
+                <a href='/uploads/allimg/151219/1-151219210015.jpg' >
+                  <img src='/uploads/allimg/151219/1-151219210015.jpg' id='bigimg'  width='440'  alt='' border='0' />
+                </a>
+                <a href='/uploads/allimg/151219/1-151219210015.jpg' >
+                	永庆湾
+                </a>
+                
+             
+
+             <script language='javascript'>dStartPlay();</script>
+
+			</div>
+           	<div class="intro"><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top; display:block"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentmidpicad&charset=gbk"></script></div>
+            <div style="clear:both"></div>
+            </div>
+			<div class="newdigg" id="newdigg">
+				<div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',22)">
+					<div class="digg_act">顶一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+				<div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',22)">
+					<div class="digg_act">踩一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+			</div>
+			 <script language="javascript" type="text/javascript">getDigg(22);</script>
+
+			<div class="boxoff">
+				<strong>------分隔线----------------------------</strong>
+			</div>
+			<div class="handle">
+				<div class="context">
+					<ul>
+						<li><a href='/a/loupan/2015/1219/21.html'>上一篇：永庆湾</a> </li>
+						<li><a>下一篇：没有了</a></li>
+					</ul>
+				</div><!-- /context -->
+				<div class="actbox">
+					<ul>
+						<li id="act-fav"><a href="/plus/stow.php?aid=22" target="_blank">收藏</a></li>
+						<li id="act-err"><a href="/plus/erraddsave.php?aid=22&title=永庆湾" target="_blank">挑错</a></li>
+						<li id="act-pus"><a href="/plus/recommend.php?aid=22" target="_blank">推荐</a></li>
+						<li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+					</ul>
+				</div><!-- /actbox -->
+			</div><!-- /handle -->
+		</div><!-- /viewbox -->
+
+<!-- //AJAX评论区 -->
+无法在这个位置找到： ajaxfeedback.htm
+
+	</div><!-- /pleft -->
+
+	<div class="pright">
+	    <div class="infos_userinfo">
+ 			
+   	 	</div>
+
+    	<div class="mt1">
+			<dl class="tbox">
+				<dt><strong>热点图集</strong></dt>
+				<dd>
+					<ul class="e3">
+                    <li>
+							<a href="/a/loupan/2015/1219/21.html" class="preview"><img src="/uploads/allimg/151219/1-1512192100360-L.jpg" alt="永庆湾"/></a>
+							<a href="/a/loupan/2015/1219/21.html" class="title">永庆湾</a>
+							<span class="intro">更新:2015-12-19</span>
+						</li>
+<li>
+							<a href="/a/loupan/2015/1219/22.html" class="preview"><img src="/uploads/allimg/151219/1-1512192100360-L.jpg" alt="永庆湾"/></a>
+							<a href="/a/loupan/2015/1219/22.html" class="title">永庆湾</a>
+							<span class="intro">更新:2015-12-19</span>
+						</li>
+
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+        <div id="contentRtPicAD" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad&charset=gbk"></script></div>
+		<div class="mt1">
+			<dl class="tbox">
+				<dt><strong>推荐图集</strong></dt>
+				<dd>
+					<ul class="e9">
+                    
+					</ul>
+				</dd>
+			</dl>
+		</div>
+      <div id="contentRtPicAD2" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad2&charset=gbk"></script></div>
+
+	</div><!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=innerfooterad2&charset=gbk"></script></div>
+<div class="footerWrap">
+
+        <div class="wrap">
+
+            <div class="footer">
+                <div class="footerShare">
+                    <img src="skin/images/ewm.gif" />
+                </div>
+                <div class="footerNav">
+                    <dl>
+                        <dd>资讯</dd>
+                        <dt>
+                            <a href="/news/8/" target="_self">新盘</a>
+                            <a href="/news/3/" target="_self">楼市</a>
+                            <a href="/news/26/" target="_self">海南</a>
+                            <a href="/news/1/" target="_self">热点</a>
+                            <a href="/news/" target="_self">头条</a>
+                            <a href="/news/25/" target="_self">数据</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dd>楼盘</dd>
+                        <dt>
+                            <a href="/news/7/" target="_self">优惠</a>
+                            <a href="/news/5/" target="_self">活动</a>
+                            <a href="/news/24/" target="_self">进度</a>
+                            <a href="/news/15/" target="_self">看房</a>
+                            <a href="/news/18/" target="_self">画报</a>
+                            <a href="/news/" target="_self">资讯</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dd>类型</dd>
+                        <dt>
+                            <a href="/house/t6.html" target="_self">海景</a>
+                            <a href="/house/t12.html" target="_self">别墅</a>
+                            <a href="/house/t7.html" target="_self">河景</a>
+                            <a href="/house/t3.html" target="_self">养生</a>
+                            <a href="/house/t5.html" target="_self">商铺</a>
+                            <a href="/house/t15.html" target="_self">公寓</a>
+                        </dt>
+                    </dl>
+                </div>
+
+                <div class="footerCopyright">
+                    <p><a href="http://www.hnyiju.com/us/">公司简介</a><a href="http://www.hnyiju.com/us/lianxi/">联系方法</a><a href="http://www.hnyiju.com/us/banquan/">版权声明</a><a href="http://www.hnyiju.com/us/zhaopin/">诚聘英才</a><a href="http://www.hnyiju.com/Keywords/">聚合阅读</a><a href="http://www.hnyiju.com/us/qqqun/">海南购房</a></p>
+                    <p>服务电话：0898-62909288 E-mail：2325362589@qq.com</p>
+                    <p>海南易居为您提供最新的楼盘信息，全面及时的新盘展示。</p>
+                    <p>&copy;2015 海南易居版权所有  <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank">琼ICP备15002152号</p>
+                </div>
+            </div>
+
+            
+            <div style="text-align: center; margin-top: 20px">
+                <a
+                    href="http://www.anquan.org/authenticate/cert/?site=www.hnyiju.com&at=business" rel="nofollow">
+                    <img src="skin/images/hy_124x47.png" />
+                </a>
+                <a
+                    href="http://net.china.com.cn/index.htm" rel="nofollow">
+
+                    <img src="skin/images/index090313_04.jpg" />
+                </a>
+                <a href="http://images.hnyiju.com/Files/pic/2014-02-21/e68c8b3b-bd27-4dd6-8f5e-1ac8c92a57e9_1101.jpg" rel="nofollow">
+                    <img src="skin/images/index090313_03.jpg" />
+                </a>
+                <a href="https://ss.knet.cn/verifyseal.dll?sn=e150713460100594473z1z000000&a=1&pa=0.4545303598517817" rel="nofollow">
+                    <img src="skin/images/cnnic.png" alt="可信网站" />
+                </a>
+                <a style="display: none" rel="nofollow">
+                    <!--可信网站图片LOGO安装开始-->
+                    <span id="kx_verify" style="display: none"></span>
+                    <script type="text/javascript">(function () { var _kxs = document.createElement('script'); _kxs.id = 'kx_script'; _kxs.async = true; _kxs.setAttribute('cid', 'kx_verify'); _kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn') + '/static/js/icon3.js?sn=e150713460100594473z1z000000&tp=icon3'; _kxs.setAttribute('size', 0); var _kx = document.getElementById('kx_verify'); _kx.parentNode.insertBefore(_kxs, _kx); })();</script>
+                    <!--可信网站图片LOGO安装结束-->
+                </a>
+                <a href="http://aic.hainan.gov.cn:6000/lz.aspx?c=10218&q=469002000016017" target="_blank" rel="nofollow">
+                    <img src="skin/images/海南工商.png" /></a>
+                <a id="_pingansec_bottomimagelarge_shiming" href="http://si.trustutn.org/info?sn=848150730015174942418&certType=1" rel="nofollow">
+                    <img src="skin/images/bottom_large_img.png" width="127px" height="47px" /></a>
+            </div>
+        </div>
+    </div>
+    <div id="floatPanel">
+        <div class="goTopPanel"><a class="arrow" href="javascript:void(0)"><ins class="icon-12"></ins></a><a class="arrow" href="javascript:void(0)"><ins class="icon-13"></ins></a></div>
+    </div>
+<!-- /footer -->
+
+</body>
+</html>

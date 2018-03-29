@@ -1,0 +1,261 @@
+﻿
+/* container
+   ========================================== */
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+#main {
+    float: none;
+    clear: both;
+    margin: 70px auto 0;
+    width: 1180px;
+}
+#bodyMain {
+    width: 100%;
+    clear: both;
+}
+#leftMain {
+    float: left;
+    width: 850px;
+}
+
+
+/* 头部焦点图 */
+.focusBox {
+    width: 100%;
+    height: 350px;
+}
+.focusBox-left {
+    position: relative;
+    float: left;
+    width: 700px;
+    height: 350px;
+    background: #ffffff;
+    overflow: hidden;
+}
+.focusBox-left .leftImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 700px;
+}
+
+.focusBox-right {
+    float: right;
+    width: 465px;
+    height: 350px;
+}
+.focusBox-img {
+    position: relative;
+    width: 226px;
+    height: 170px;
+    overflow: hidden;
+}
+.focusBox .focusImgTit {
+    position: absolute;
+    width: 13em;
+    height: 50px;
+    padding: 16px 0 8px 20px;
+    bottom: 0;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 26px;
+    /*text-indent: 25px;*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: url("../images/focusimgtit_bg.png") repeat-x 0 -5px;
+}
+
+.focusBox-left .focusImgTit {
+    width: 100%;
+}
+
+/*列表导航条*/
+.navBar {
+    height: 48px;
+    background: #FFFFFF;
+}
+.navBar .navLink {
+    /*display: inline-block;*/
+    display: block;
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    padding: 0 22px;
+    color: #333333;
+}
+.navBar .navAction {
+    color: #ffffff;
+    background: #c00;
+    position: relative;
+}
+.navBar .navAction:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #c00;
+    position: absolute;
+    left: 42%;
+    bottom: -14px;
+}
+
+.newList {
+    padding-bottom: 20px;
+}
+.newBox {
+    /*height:100px;*/
+    padding: 18px;
+    margin-top: 20px;
+    background: #ffffff;
+}
+.newBox-pic, .newBox-pic img {
+    width: 160px;
+    height: 120px;
+}
+.newBox-info {
+    width: 630px;
+}
+.newBox-info-tit {
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+}
+.newBox-info-tit a {
+    color: #333333;
+}
+.newBox-info-sub {
+    height: 32px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+.newBox-info-preface {
+    height: 54px;
+    width: 630px;
+    overflow: hidden;
+    padding-top: 6px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666666;
+}
+.moreNew {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #d9d9d9;
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+}
+.moreNew:hover {
+    color: #999999;
+}
+/* 推荐活动 */
+.asideBar {
+    width: 100%;
+    background: #fff;
+}
+.asideBar-head {
+    height: 50px;
+    padding: 10px 0;
+    background: #f7f7f7;
+}
+.asideBar-tit {
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 20px;
+    color: #333;
+}
+.asideBar-main {
+    margin: 20px 20px 0;
+}
+.actionList {
+    padding-bottom: 20px;
+}
+.actionList-li {
+    width: 100%;
+}
+.actionList-li .actionTit {
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+    text-indent: 22px;
+    background: url("../images/icon-bg.png") no-repeat;
+}
+.actionList-li .focus_link {color: #333333}
+.actionList-li .li_1 {
+    background-position: 0 -3px;
+}
+.actionList-li .li_2 {
+    background-position: 0 -40px;
+}
+.actionList-li .li_3 {
+    background-position: 0 -79px;
+}
+.actionList-li .li_4 {
+    background-position: 0 -117px;
+}
+.actionList-li .li_5 {
+    background-position: 0 -156px;
+}
+.actionList-li .actionDetailed {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e1e1e1;
+    display: none;
+}
+.action, .action .actionDetailed {
+    display: block;
+}
+.actionList-li .actionDetailed-img {
+    display: block;
+    width: 240px;
+    height: 180px;
+}
+.actionList-li .actionDetailed-js {
+    width: 240px;
+    padding-top: 10px;
+    line-height: 24px;
+    text-align: justify;
+    font-size: 12px;
+    color: #999;
+}
+
+
+
+
+/*下载app*/
+.app-advert {
+    width: 100%;
+    background: #ffffff;
+    line-height: 0;
+}
+.app-advert .linkApp {
+    display: block;
+    margin: 20px auto 0;
+    width: 250px;
+}
+.downBox {
+    background: #f7f7f7;
+    border-top: 1px solid #e1e1e1;
+    padding: 20px;
+    height: 148px;
+}
+.downBox-img {
+    width: 104px;
+    height: 105px;
+}
+.downBox-btn {
+    width: 132px;
+    height: 105px;
+}
+.btnDown {
+    display: block;
+    clear: both;
+}

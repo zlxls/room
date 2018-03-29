@@ -1,0 +1,171 @@
+﻿/* Element 咨询.官网
+   ======================================================================== */
+body,div,
+dl,dt,dd,
+ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,
+input,textarea,p,blockquote,th,td {margin: 0; padding: 0;}
+table {border-collapse: collapse; border-spacing: 0;}
+h1,h2,h3,h4,h5,h6 {font-size: 100%; font-weight: normal;}
+img {max-width: 100%; border: 0}
+body {
+    font-size: 14px;
+    font-family: Helvetica, '\5FAE\8F6F\96C5\9ED1', Tahoma, Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+ul, ol, dl { margin: 0; padding: 0; list-style: none;}
+li {list-style: none;}
+*:focus { outline: 0 !important;}
+.clear:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.table.bor-no td {border:none; vertical-align: middle;}
+.fl {float: left; display: inline;}
+.fr {float: right; display: inline;}
+.txt-c {text-align: center;}
+.txt-r {text-align: right;}
+.txt-l {text-align: left;}
+.txt-vt {vertical-align: top}
+.txt-vm {vertical-align: middle}
+.txt-vb {vertical-align: bottom}
+.unl {text-decoration: underline;}
+.no_unl {text-decoration: none;}
+.zoom {zoom: 1;}
+.hidden {visibility: hidden;}
+.none {display: none;}
+
+/* Layout
+   ======================================================================== */
+#container {
+    width: 1180px;
+    margin: 20px auto;
+    height: 100%;
+    clear: both;
+}
+#focusBar {
+    clear: both;
+    width: 100%;
+    margin-top: 20px;
+}
+#main {
+    float: left;
+    width:850px;
+    /*background: #FFFFFF;*/
+}
+#aside {
+    float: right;
+    width: 298px;
+}
+.wrap {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 100%;
+    height: 100%;
+}
+.wrap:before, .wrap:after, .box:before, .box:after {
+    display: table;
+    content: ' ';
+}
+.wrap:after, .box:after {clear: both;}
+.box {
+    border: 1px solid #e1e1e1;
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Public
+   ======================================================= */
+/* 文本框 长度 */
+.inp-min, .form-inline .inp-min {width:80px;}
+.inp-normal, .form-inline .inp-normal {width:180px;}
+.inp-large, .form-inline .inp-large {width:220px;}
+.inp-max, .form-inline .inp-max {width:250px;}
+
+/* 单\复选框 type="radio" */
+.lab-fill {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.cheBox {
+    display: block;
+    margin-top: 0;
+    position: relative;
+}
+.cheBox-lab {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    min-height: 20px;
+    padding-left: 0;
+}
+.cheBox-lab input, .cheBox .cheBox-lab input[type="radio"] {
+    box-sizing: border-box;
+    left: 0;
+    line-height: normal;
+    margin: 4px 0 0;
+    position: absolute;
+}
+/* 单\复选框 图片 "class=inp-check selected" */
+.inp-check {
+    display: inline-block;
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+    background: url("../images/walletspirit.png") -86px -3px;
+}
+.inp-check.selected {
+    background-position: -126px -3px;;
+}
+.inp-radio {
+    display: inline-block;
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+    background: url("../images/walletspirit.png") -6px -3px;
+}
+.inp-radio.selected {
+    background-position: -46px -3px;;
+}
+
+.mt10 { margin-top: 10px;}
+.mt15 { margin-top: 15px;}
+.mt12 { margin-top: 12px;}
+.mt20 { margin-top: 20px;}
+
+
+
+/*分页*/
+DIV.mm {
+	  PADDING-LEFT: 3px; FONT-SIZE: 100%; PADDING-BOTTOM: 3px; MARGIN: 3px; COLOR: #ff6500; PADDING-TOP: 3px; TEXT-ALIGN: right
+}
+DIV.mm A {
+	BORDER-RIGHT: #ff9600 1px solid; PADDING-RIGHT: 7px; BACKGROUND-POSITION: 50% bottom; BORDER-TOP: #ff9600 1px solid; PADDING-LEFT: 7px; BACKGROUND-IMAGE: url(mm.jpg); PADDING-BOTTOM: 5px; BORDER-LEFT: #ff9600 1px solid; COLOR: #ff6500; MARGIN-RIGHT: 3px; PADDING-TOP: 5px; BORDER-BOTTOM: #ff9600 1px solid; TEXT-DECORATION: none
+}
+DIV.mm A:hover {
+	BORDER-RIGHT: #ff9600 1px solid; BORDER-TOP: #ff9600 1px solid; BACKGROUND-IMAGE: none; BORDER-LEFT: #ff9600 1px solid; COLOR: #ff6500; BORDER-BOTTOM: #ff9600 1px solid; BACKGROUND-COLOR: #ffc794
+}
+DIV.mm A:active {
+	BORDER-RIGHT: #ff9600 1px solid; BORDER-TOP: #ff9600 1px solid; BACKGROUND-IMAGE: none; BORDER-LEFT: #ff9600 1px solid; COLOR: #ff6500; BORDER-BOTTOM: #ff9600 1px solid; BACKGROUND-COLOR: #ffc794
+}
+DIV.mm a.active {
+	BORDER-RIGHT: #ff6500 1px solid; PADDING-RIGHT: 7px; BORDER-TOP: #ff6500 1px solid; PADDING-LEFT: 7px; FONT-WEIGHT: bold; PADDING-BOTTOM: 5px; BORDER-LEFT: #ff6500 1px solid; COLOR: #ff6500; MARGIN-RIGHT: 3px; PADDING-TOP: 5px; BORDER-BOTTOM: #ff6500 1px solid; BACKGROUND-COLOR: #ffbe94
+}
+DIV.mm a.disabled {
+	display:none
+}
+DIV.mm li{ float:left;}
